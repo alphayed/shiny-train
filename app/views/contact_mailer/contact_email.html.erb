@@ -92,23 +92,6 @@
   <body yahoofix>
     <span id="body_style" style="display:block">
 
-      <!-- Preheader -->
-      <table class="preheader" cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-          <td>
-            <!-- preheaderContent and webversion -->
-            <table border="0" cellpadding="0" cellspacing="0" summary="" width="640" align="center">
-              <tr>
-                <td class="preheaderContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                <td class="webversion">No images? <a href="#" title="View the webversion">View the webversion</a></td>
-              </tr>
-            </table>
-            <!-- End preheaderContent and webversion -->
-          </td>
-        </tr>
-      </table>
-      <!-- End preheader -->
-
       <!-- featuredHeader -->
       <table border="0" cellspacing="0" cellpadding="0" width="100%" summary="" class="featuredHeader">
         <tr>
@@ -142,7 +125,9 @@
         <tr>
           <td class="sectionOdd">
             <table border="0" cellpadding="0" cellspacing="0" width="640" align="center" summary="">
-              <td class="section column">Message Begins Here: <%= @body %></td>
+              <td class="section column">Message Begins Here:</td>
+              <br>
+              <td class="section column"><%= @body %></td>
             </table>
           </td>
         </tr>
