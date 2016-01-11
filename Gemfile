@@ -12,10 +12,13 @@ group :production do
   gem 'rails_12factor'
 end
 
-# Use sprockets 2.8 
-gem 'sprockets', '2.8'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
+# Use bootstrap library for styles
+gem 'bootstrap-sass', '3.3.1'
+# Use font awesome library for icons
+gem 'font-awesome-sass', '~> 4.5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

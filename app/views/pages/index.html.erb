@@ -1,0 +1,404 @@
+  
+  <header role="banner" id="fh5co-header">
+      <div class="container">
+        <!-- <div class="row"> -->
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <!-- Mobile Toggle Menu Button -->
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+            <a class="navbar-brand" href="#" data-nav-section="home"><i class="fa fa-gears"></i>F I X A</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <div class="nav navbar-nav navbar-right">
+              <%# if user_signed_in? %>
+                <%#= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn" %>
+              <%# else %>
+                <%#= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
+              <%# end %>
+            </div>
+              <ul class="nav navbar-nav navbar-right">
+                <%# if user_signed_in? %>
+                  <li class="active"><%#= link_to "My Account", user_path(current_user) %></p></li>
+                <%# end %>
+                <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+                <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+                <li><a href="#" data-nav-section="features"><span>Protection</span></a></li>
+         		  <li><a href="#" data-nav-section="testimonials"><span>Availability</span></a></li>
+          	  <li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
+          	  <li><a href="#" data-nav-section="press"><span>FQA</span></a></li>
+              </ul>
+            </div>
+          </nav>
+        <!-- </div> -->
+      </div>
+  </header>
+  
+  <!--Carousel here ==================================================================-->
+  <div id="slider" data-section="home">
+    <div class="owl-carousel owl-carousel-fullwidth">
+      <!-- You may change the background color here. -->
+        <div class="item" style="background: #352f44;">
+          <div class="container" style="position: relative;">
+            <div class="row">
+              <div class="col-md-7 col-sm-7">
+                <div class="fh5co-owl-text-wrap">
+                  <div class="fh5co-owl-text">
+                    <h1 class="fh5co-lead to-animate">No more booking appoinments, No more waiting</h1>
+                  <h2 class="fh5co-sub-lead to-animate">Tell us when you what your car picked up for service and one of our experienced runners will be  there to pick it up the next day.</h3>
+                  <p class="to-animate-2"><a href="#" data-nav-section="testimonials" class="btn btn-primary btn-lg">Find Us</a></p>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">-->
+              <!--  <div class="iphone to-animate-2"><img src="images/iphone-2.png" alt="Some image"></div>-->
+              <!--</div>-->
+  
+            </div>
+          </div>
+        </div>
+      <!-- You may change the background color here.  -->
+        <div class="item" style="background: #38569f;">
+          <div class="container" style="position: relative;">
+            <div class="row">
+              <div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+                <div class="fh5co-owl-text-wrap">
+                  <div class="fh5co-owl-text">
+                    <h1 class="fh5co-lead to-animate">No more worries</h1>
+                  <h2 class="fh5co-sub-lead to-animate">All repairs and fully guaranteed for 90 days and with our $5M General Liability and $1M Garage Keepers policy you can relax knowing that you and your car are protected.</h3>
+                  <p class="to-animate-2"><a data-nav-section="testimonials" class="btn btn-primary btn-lg">Find Us</a></p>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">-->
+              <!--  <div class="iphone to-animate-2"><img src="images/iphone-1.png" alt="image info"></div>-->
+              <!--</div>-->
+  
+            </div>
+          </div>
+        </div>
+  
+        <div class="item" style="background: #1abc9c;">
+          <div class="overlay"></div>
+          <div class="container" style="position: relative;">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="fh5co-owl-text-wrap">
+                  <div class="fh5co-owl-text">
+                    <h1 class="fh5co-lead to-animate">Need your car fueled and washed?</h1>
+                  <h2 class="fh5co-sub-lead to-animate">Our trained runners would love to take this burden off your hands. Just ask.</h3>
+                  <p class="to-animate-2"><a data-nav-section="testimonials" target="_blank" class="btn btn-primary btn-lg">Find Us</a></p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+    </div>
+  </div>
+  
+  <!--About section here==============================================================-->
+  <div id="fh5co-about-us" data-section="about">
+    <div class="container">
+      <div class="row row-bottom-padded-lg" id="about-us">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="to-animate">About Us</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 to-animate">
+              <h3>Founded and based in Toronto, FIXA is a new service that sends runners to pick up your car for you, wherever it need service so you don't have to book appoinments or wait for long hours while you car is being serviced. We have partnered with some of Toronto best service facilities to  build an infrastructure that offers you fast, affordable and convenient service you can trust.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 to-animate">
+          <img src="#" class="img-responsive img-rounded" alt="img info">
+        </div>
+      </div>
+      <div class="row" id="team">
+        <div class="col-md-12 section-heading text-center to-animate">
+          <h2>Team</h2>
+        </div>
+        <div class="col-md-12">
+          <div class="row row-bottom-padded-lg">
+            <div class="col-md-4 text-center to-animate">
+              <div class="person">
+                <img src="#" class="img-responsive img-rounded" alt="Person">
+                <h3 class="name">Ahmed Fayed</h3>
+                <div class="position">CEO</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                <ul class="social social-circle">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 text-center to-animate">
+              <div class="person">
+                <img src="#" class="img-responsive img-rounded" alt="Person">
+                <h3 class="name">Basil Frangias</h3>
+                <div class="position">COO</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                <ul class="social social-circle">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 text-center to-animate">
+              <div class="person">
+                <img src="#" class="img-responsive img-rounded" alt="Person">
+                <h3 class="name">John Doe</h3>
+                <div class="position">Runner</div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                <ul class="social social-circle">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Services section here ==========================================================-->
+  <div id="fh5co-our-services" data-section="services">
+    <div class="container">
+      <div class="row row-bottom-padded-sm">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="to-animate">Our Services</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 to-animate">
+              <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box to-animate">
+            <div class="icon colored-1"><span><i class="fa fa-tint"></i></span></div>
+            <h3>Oil + 90 Point Inspection</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="box to-animate">
+            <div class="icon colored-2"><span><i class="fa fa-wrench"></i></span></div>
+            <h3>General Repairs</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+          
+          <div class="box to-animate">
+            <div class="icon colored-5"><span><i class="fa fa-gear"></i></span></div>
+            <h3>Winterization</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="box to-animate">
+            <div class="icon colored-3"><span><i class="fa fa-car"></i></span></div>
+            <h3>CarCare</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!--Protection (Features section) here==============================================-->
+  <div id="fh5co-features" data-section="features">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-12 section-heading text-center">
+  				<h2 class="single-animate animate-features-1">Protection</h2>
+  				<div class="row">
+  					<div class="col-md-8 col-md-offset-2 single-animate animate-features-2">
+  						<h3>For your piece of mind.</h3>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		
+  		<div class="row row-bottom-padded-sm">
+  			<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+  				<div class="fh5co-icon"><i class="fa fa-certificate"></i></div>
+  				<div class="fh5co-desc">
+  					<h3>Insurance</h3>
+  					<p>We carry a $5M General Liability and $1M Garage Keepers policy protecting you, others, and your vehicle. It is adviced that you do not leave anything valuable in the your vehicle. (Inclusion starts from here)All claims for damage should be reported within 24 hours of the completion of the service.(include this in the FQA)</p>
+  				</div>
+  			</div>
+  			
+  			<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+  				<div class="fh5co-icon"><i class="fa fa-child"></i></div>
+  				<div class="fh5co-desc">
+  					<h3>Runners</h3>
+  					<p>Each of our runners goes through a rigorous interview and training process. They must have a clean driving record, pass a criminal background check and have a clean driving record. FIXA has a zero tolerance drug and alcohol policy.</p>
+  				</div>
+  			</div>
+  			
+  			<div class="clearfix visible-sm-block visible-xs-block"></div>
+  			<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+  				<div class="fh5co-icon"><i class="fa fa-thumb-tack"></i></div>
+  				<div class="fh5co-desc">
+  					<h3>Reassurance</h3>
+  					<p>You can track your vehicle live from the moment the runner shows up at your location to the moment your vehicle is delievered back to you. Need to contact your runner? No problem, you will be able to call or text them directly through app.</p>
+  				</div>
+  			</div>
+  			
+  			<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+  				<div class="fh5co-icon"><i class="fa fa-wrench"></i></div>
+  				<div class="fh5co-desc">
+  					<h3>Service Facilities</h3>
+  					<p>Your vehicle will be serviced at one of our top rated hand picked service facility. You can relax knowing that all repairs are guaranteed for 90 days. If it's not fixed from the first time, we will fix it and you don't have to pay an extra penny.</p>
+  				</div>
+  			</div>
+  			
+  			<div class="clearfix visible-sm-block visible-xs-block"></div>
+  		</div>
+  		
+  		<div class="row">
+  			<div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
+  				<a href="#" class="btn btn-primary btn-block">Learn More</a>
+  			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+  
+  <!--Availability (testimonials) section here========================================-->
+  <div id="fh5co-testimonials" data-section="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="to-animate">Find us in your area</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 subtext to-animate">
+              <h3>We are currently available in downtown Toronto. We’re looking to expand to your area, so check our Facebook or Twitter for updates! Hours of operation: Mon-Thurs: 7am - 7pm. remeber to add the 24 hr notice.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  	<section>
+  		<div class= "container">
+  			<div class="element"></div>
+  			 <center>
+  			   <input id="search-box" placeholder="Enter Postal Code">
+  			 </center>
+  		 </div>
+  	</section>
+    
+  </div>
+  
+  <!--Pricing section here============================================================-->
+  <div id="fh5co-pricing" data-section="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="single-animate animate-pricing-1">Pricing</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 subtext single-animate animate-pricing-2">
+              <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">Delivery fee</h2>
+            <div class="price"><sup class="currency">$</sup>25<small></small></div>
+            <p>We charge a flat delivery fee added to any repair or service your car need </p>
+            <hr>
+            <P>Repairs and service will vary depending on your car make and model. You will only be charge for repairs that you authorize.</P>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">CareCare</h2>
+            <div class="price"><sup class="currency">$</sup>15<small>extra</small></div>
+            <p>With the Added CarCare service. We will wash your car and fuel it if requested.</p>
+            <hr>
+            <P>Fuel charge is based on the rates at the pump. We don't charge extra for that service.</P>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--FQA (press) section here========================================================-->
+  <div id="fh5co-press" data-section="press">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="single-animate animate-press-1">FQA</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 subtext single-animate animate-press-2">
+              <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <!--  Item -->
+          <div class="fh5co-press-item to-animate">
+            <div class="fh5co-press-text">
+              <h3 class="h2 fh5co-press-title">Are You Insured? <span class="fh5co-border"></span></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+            </div>
+          </div>
+          <!--  Item -->
+        </div>
+  
+        <div class="col-md-6">
+          <!--  Item -->
+          <div class="fh5co-press-item to-animate">
+            <div class="fh5co-press-text">
+              <h3 class="h2 fh5co-press-title">How Do You Screen Your Runners? <span class="fh5co-border"></span></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+            </div>
+          </div>
+          <!--  Item -->
+        </div>
+  
+        <div class="col-md-6">
+          <!--  Item -->
+          <div class="fh5co-press-item to-animate">
+            <div class="fh5co-press-text">
+              <h3 class="h2 fh5co-press-title">What Is Your Service Area?  <span class="fh5co-border"></span></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+            </div>
+          </div>
+          <!--  Item -->
+        </div>
+  
+        <div class="col-md-6">
+          <!--  Item -->
+          <div class="fh5co-press-item to-animate">
+            <div class="fh5co-press-text">
+              <h3 class="h2 fh5co-press-title">How Mush Does The Service Cost? <span class="fh5co-border"></span></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+            </div>
+          </div>
+          <!--  Item -->
+        </div>
+      </div>
+  
+      <div class="row">
+            <div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
+    		    <a href="contacts/new" class="btn btn-primary btn-block">Learn More</a>
+    	    </div>
+  	   </div>
+  
+    </div>
+  </div>
+  
+  
