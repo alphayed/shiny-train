@@ -55,7 +55,7 @@
                                 <ul class="nav navbar-nav">
                                     <li class="active">
                                         <a href="">
-                                            <span class="icon fa fa-tachometer"></span><span class="title"><%= link_to "Dashboard", user_profile_path(current_user) %></span>
+                                            <span class="icon fa fa-tachometer"></span><span class="title"><%= link_to "Dashboard", user_path(current_user) %></span>
                                         </a>
                                     </li>
                                     <li>
@@ -74,12 +74,12 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a>
-                                            <span class="icon fa fa-cubes"></span><span class="title"><%= link_to "Settings", edit_user_profile_path(current_user) %></span>
+                                        <a href="#">
+                                            <span class="icon fa fa-cubes"></span><span class="title">Settings</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/contacts/new/">
+                                        <a href="/contacts/new">
                                             <span class="icon fa fa-envelope"></span><span class="title">Contact</span>
                                         </a>
                                     </li>
@@ -99,68 +99,17 @@
                         </nav>
                     </div>
                     <!-- Main Content -->
-                    <div class="container-fluid">
-                        <div class="side-body padding-top">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="#">
-                                        <div class="card red summary-inline">
-                                            <div class="card-body">
-                                                <i class="icon fa fa-tint fa-4x"></i>
-                                                <div class="content">
-                                                    <div class="title">Oil Change</div>
-                                                    <div class="sub-title">+ 90 Point Inspection</div>
-                                                </div>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="#">
-                                        <div class="card yellow summary-inline">
-                                            <div class="card-body">
-                                                <i class="icon fa fa-wrench fa-4x"></i>
-                                                <div class="content">
-                                                    <div class="title">Repairs</div>
-                                                    <div class="sub-title">New</div>
-                                                </div>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="#">
-                                        <div class="card green summary-inline">
-                                            <div class="card-body">
-                                                <i class="icon fa fa-car fa-4x"></i>
-                                                <div class="content">
-                                                    <div class="title">CarCare</div>
-                                                    <div class="sub-title">New</div>
-                                                </div>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="#">
-                                        <div class="card blue summary-inline">
-                                            <div class="card-body">
-                                                <i class="icon fa fa-gear fa-4x"></i>
-                                                <div class="content">
-                                                    <div class="title">Winterization</div>
-                                                    <div class="sub-title">New</div>
-                                                </div>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
-                                    </a>
+                    <div class="mcontainer"> <!--The mcontainer adjusts the height for the update form found in custom.css.scss-->
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <h1 class="text-center">Edit Info</h1>
+                                <div>
+                                    <%= render 'form' %>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End Main Content -->
                 </div>
             </div>
         </div>

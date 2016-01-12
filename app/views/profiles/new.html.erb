@@ -1,48 +1,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h1 class="text-center">Update Info</h1>
+                <h1 class="text-center">Add Info</h1>
                 <div>
-                    <%= form_for @profile, url: user_profile_path do |f| %>
-                        <div class="form-group">
-                            <%= f.label :first_name %>
-                            <%= f.text_field :first_name, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :last_name %>
-                            <%= f.text_field :last_name, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :phone_number %>
-                            <%= f.text_field :phone_number, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :email %>
-                            <%= f.text_field :contact_email, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :address %>
-                            <%= f.text_field :address, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :city %>
-                            <%= f.select :city, ['Toronto'], {prompt: "Please select"}, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.label :postal_code %>
-                            <%= f.text_field :postal_code, class: 'form-control' %>
-                        </div>
-                        
-                        <div class="form-group">
-                            <%= f.submit "Update", class: 'btn btn-primary' %>
-                        </div>
-                    <% end %>
+                    <%= render 'form' %>
                 </div>
             </div>
         </div>
