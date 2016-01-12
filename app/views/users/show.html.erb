@@ -54,9 +54,9 @@
                                 </div>
                                 <ul class="nav navbar-nav">
                                     <li class="active">
-                                        <a href="">
-                                            <span class="icon fa fa-tachometer"></span><span class="title"><%= link_to "Dashboard", user_profile_path(current_user) %></span>
-                                        </a>
+                                        <%= link_to user_path(current_user) do %>
+                                            <span class="icon fa fa-tachometer"></span><span class="title">Dashborad</span>
+                                        <% end %>
                                     </li>
                                     <li>
                                         <a href="#">
@@ -74,9 +74,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a>
-                                            <span class="icon fa fa-cubes"></span><span class="title"><%= link_to "Settings", edit_user_profile_path(current_user) %></span>
-                                        </a>
+                                        <%= link_to edit_user_profile_path(current_user) do %>
+                                            <span class="icon fa fa-cubes"></span><span class="title">Settings</span>
+                                        <% end %>
                                     </li>
                                     <li>
                                         <a href="/contacts/new/">

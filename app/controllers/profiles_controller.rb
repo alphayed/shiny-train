@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
         @user = User.find( params[:user_id] )
         @profile = @user.build_profile(profile_params)
         if @profile.save
-            flash[:success] = "Info Updated!"
+            flash[:success] = "Info Added"
             redirect_to user_path( params[:user_id] )
         else
             render action: :new
@@ -20,6 +20,17 @@ class ProfilesController < ApplicationController
         @user = User.find( params[:user_id] )
         @profile = @user.profile
         
+    end
+    
+    def update
+       @user = User.find( params[:user_id] ) 
+       @profile = @user.profile
+       if @profile.update_attributes(profile_params)
+           flash[:success] = " Info Updated"
+           redirect_to edit_user_profile_path(current_user)
+       else
+           render action: :edit
+       end
     end
     
     def show
