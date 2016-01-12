@@ -1,0 +1,74 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="text-center">Update Info</h1>
+                <div>
+                    <%= form_for @profile, url: user_profile_path do |f| %>
+                        <div class="form-group">
+                            <%= f.label :first_name %>
+                            <%= f.text_field :first_name, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :last_name %>
+                            <%= f.text_field :last_name, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :phone_number %>
+                            <%= f.text_field :phone_number, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :email %>
+                            <%= f.text_field :contact_email, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :address %>
+                            <%= f.text_field :address, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :city %>
+                            <%= f.select :city, ['Toronto'], {prompt: "Please select"}, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.label :postal_code %>
+                            <%= f.text_field :postal_code, class: 'form-control' %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.submit "Update", class: 'btn btn-primary' %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="row row-bottom-padded-sm">
+          <div class="col-md-12">
+            <% if current_user %>
+              <p class="copyright text-center">&copy; 2015 <a href="/" data-nav-section="home">FIXA Technologies, Inc.</a> All Rights Reserved. <br> <%= link_to "My Account", user_path(current_user) if current_user %></p>
+            <% else %>
+              <p class="copyright text-center">&copy; 2015 <a href="/" data-nav-section="home">FIXA Technologies, Inc.</a> All Rights Reserved. <br><a href="/" data-nav-section="home">Home</a></p>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="social social-circle">
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+              <!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+                     

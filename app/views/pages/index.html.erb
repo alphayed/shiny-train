@@ -10,16 +10,16 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <div class="nav navbar-nav navbar-right">
-              <%# if user_signed_in? %>
-                <%#= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn" %>
-              <%# else %>
-                <%#= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
-              <%# end %>
+              <% if user_signed_in? %>
+                <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn" %>
+              <% else %>
+                <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
+              <% end %>
             </div>
               <ul class="nav navbar-nav navbar-right">
-                <%# if user_signed_in? %>
-                  <li class="active"><%#= link_to "My Account", user_path(current_user) %></p></li>
-                <%# end %>
+                <% if user_signed_in? %>
+                  <li class="active"><%= link_to "My Account", user_path(current_user) %></p></li>
+                <% end %>
                 <li><a href="#" data-nav-section="about"><span>About</span></a></li>
                 <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
                 <li><a href="#" data-nav-section="features"><span>Protection</span></a></li>

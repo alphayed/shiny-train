@@ -1,0 +1,167 @@
+    <div class="user">
+        <div class="flat-green">
+            <div class="app-container">
+                <div class="row content-container">
+                    <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-expand-toggle">
+                                    <i class="fa fa-bars icon"></i>
+                                </button>
+                                <ol class="breadcrumb navbar-breadcrumb">
+                                    <li class="active">Request A Service</li>
+                                </ol>
+                                <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                                    <i class="fa fa-power-off icon"></i>
+                                </button>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                                    <i class="fa fa-times icon"></i>
+                                </button>
+                                <li>
+                                    <% if user_signed_in? %>
+                                        <% if current_user.profile %> 
+                                            <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <%= @user.profile.first_name %> <%= @user.profile.last_name %></a>
+                                        <% else %>
+                                            <%= link_to "Add You Info", new_user_profile_path(current_user) if current_user %>
+                                        <% end %>
+                                    <% end %>
+                                </li>
+                                <li>
+                                    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="side-menu sidebar-inverse">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="side-menu-container">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="#">
+                                        <div class="icon fa fa-paper-plane"></div>
+                                        <% if current_user.profile %>
+                                            <div class="title">Hello <%= @user.profile.first_name %></div>
+                                        <% else %>
+                                            <div class="title">Hello</div>
+                                        <% end %>    
+                                            
+                                    </a>
+                                    <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                        <i class="fa fa-times icon"></i>
+                                    </button>
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li class="active">
+                                        <a href="">
+                                            <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-credit-card"></span><span class="title">Payment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-history"></span><span class="title">History</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-question-circle"></span><span class="title">Help</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-cubes"></span><span class="title">Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contacts/new">
+                                            <span class="icon fa fa-envelope"></span><span class="title">Contact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <span class="icon fa fa-facebook"></span><span class="title">Like Us</span>
+                                        </a>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--    <a href="#">-->
+                                    <!--        <span class="icon fa fa-thumbs-o-up"></span><span class="title">Something</span>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
+                    <!-- Main Content -->
+                    <div class="container-fluid">
+                        <div class="side-body padding-top">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="card red summary-inline">
+                                            <div class="card-body">
+                                                <i class="icon fa fa-tint fa-4x"></i>
+                                                <div class="content">
+                                                    <div class="title">Oil Change</div>
+                                                    <div class="sub-title">+ 90 Point Inspection</div>
+                                                </div>
+                                                <div class="clear-both"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="card yellow summary-inline">
+                                            <div class="card-body">
+                                                <i class="icon fa fa-wrench fa-4x"></i>
+                                                <div class="content">
+                                                    <div class="title">Repairs</div>
+                                                    <div class="sub-title">New</div>
+                                                </div>
+                                                <div class="clear-both"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="card green summary-inline">
+                                            <div class="card-body">
+                                                <i class="icon fa fa-car fa-4x"></i>
+                                                <div class="content">
+                                                    <div class="title">CarCare</div>
+                                                    <div class="sub-title">New</div>
+                                                </div>
+                                                <div class="clear-both"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="card blue summary-inline">
+                                            <div class="card-body">
+                                                <i class="icon fa fa-gear fa-4x"></i>
+                                                <div class="content">
+                                                    <div class="title">Winterization</div>
+                                                    <div class="sub-title">New</div>
+                                                </div>
+                                                <div class="clear-both"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

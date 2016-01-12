@@ -80,12 +80,12 @@
 	      <div class="row row-bottom-padded-sm">
 	        <div class="col-md-12">
 	          <p class="copyright text-center">&copy; 2015 <a href="/" data-nav-section="home">FIXA Technologies, Inc.</a> All Rights Reserved. <br><a href="#">Legal</a> | <a href="/" data-nav-section="testimonials">Availability</a> | <a href="#" data-nav-section="press">FQA</a>
-              		<%# if current_user %>
-		       			<br> <%#= link_to "My Account", user_path(current_user) if current_user %>
+              		<% if current_user %>
+		       			<br> <%= link_to "My Account", user_path(current_user) if current_user %>
 		      
-		       		<%# else %>
+		       		<% else %>
 		       			<br><a href="/" data-nav-section="home">Home</a>
-		        	<%# end %>
+		        	<% end %>
 		     	</p>
 	        </div>
 	      </div>
@@ -96,7 +96,7 @@
 	            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
 	            <!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
 	            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-	            <li><a href="contacts/new"><i class="fa fa-envelope"></i></a></li>
+	            <li><a href="/contacts/new"><i class="fa fa-envelope"></i></a></li>
 	  
 	          </ul>
 	        </div>
