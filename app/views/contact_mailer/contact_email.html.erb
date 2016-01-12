@@ -87,6 +87,35 @@
           body[yahoofix] .sectionArticleTitle {padding: 0px 10px 0px 10px !important;}
           body[yahoofix] .sectionArticleContent {padding: 0px 10px 30px 10px !important;}
         }
+        .container {
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .container:before, .container:after {
+          content: " ";
+          display: table;
+        }
+        .container:after {
+          clear: both;
+        }
+        @media (min-width: 768px) {
+          .container {
+            width: 750px;
+          }
+        }
+        @media (min-width: 992px) {
+          .container {
+            width: 970px;
+          }
+        }
+        @media (min-width: 1200px) {
+          .container {
+            width: 1170px;
+          }
+        }
+
     </style>
   </head>
   <body yahoofix>
@@ -107,12 +136,14 @@
                     </tr>
                     <tr>
                       <td class="featuredContent">
-                      You have received a message from the site's contact form, From: <%= "#{ @name }, #{ @email }." %>
+                      You have received a message from the site's CONTACT FORM, From: <%= "#{ @name }, #{ @email }" %> <br>
+                      <br>
+                      Message Begins Here:
                       </td>
                     </tr>
                   </table>
                 </td>
-                <td id="featuredImage" class="column"><img src="mobile-phone.png" width="234" alt="" /></td>
+                <td id="featuredImage" class="column"><img src="article-image-24.png" width="234" alt="" /></td>
               </tr>
             </table>
           </td>
@@ -125,9 +156,9 @@
         <tr>
           <td class="sectionOdd">
             <table border="0" cellpadding="0" cellspacing="0" width="640" align="center" summary="">
-              <td class="section column">Message Begins Here:</td>
-              <br>
-              <td class="section column"><%= @body %></td>
+
+                    <p class="sectionTitle" style="font-size: 18px;"><%= @body %></p>
+
             </table>
           </td>
         </tr>
@@ -139,7 +170,7 @@
               <tr><td class="sectionTitle">Click To Reply</td></tr>
                 <td class="buttonContainer">
                   <table border="0" cellpadding="0" cellspacing="0" summary="" width="30%" align="center">
-                    <tr><td class="button"><a href="#" title="ipsum">Reply</a></td></tr>
+                    <tr><td class="button"><%= "#{ @email }" %></td></tr>
                   </table>
                 </td>
               </tr>
