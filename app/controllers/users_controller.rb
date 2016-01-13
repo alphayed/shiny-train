@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :validate_user
   
   def index
     @users = User.includes(:profile)

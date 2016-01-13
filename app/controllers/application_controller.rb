@@ -8,4 +8,14 @@ class ApplicationController < ActionController::Base
       session["user_return_to"] || user_path(current_user)
     end
     
+    def validate_user_profile
+      @user = User.find( params[:user_id] )
+      redirect_to(edit_user_profile_path(current_user)) unless @user == current_user
+    end
+
+    def validate_user
+      @user = User.find( params[:id] )
+      redirect_to(user_path(current_user)) unless @user == current_user
+    end
+    
 end
