@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+    before_action :authenticate_user!
+    before_action :validate_user_profile
     def new
         # form where a use will fill out ther own profile.
         @user = User.find( params[:user_id] )
@@ -31,10 +33,6 @@ class ProfilesController < ApplicationController
        else
            render action: :edit
        end
-    end
-    
-    def show
-      
     end
     
     private 
