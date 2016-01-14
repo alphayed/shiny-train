@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  make: MyString
+  model: MyString
+  color: MyString
+  year: MyString
+
+two:
+  type: 
+  make: MyString
+  model: MyString
+  color: MyString
+  year: MyString

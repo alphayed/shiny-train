@@ -64,4 +64,7 @@ end
 # Use devise for user authentication
 gem 'devise', '~> 3.5'
 # Paperclip is intended as an easy file attachment library for ActiveRecord. 
-gem "paperclip", "~> 4.3"
+gem 'paperclip', '~> 4.3'
+# Use simple form for manging forms
+gem 'simple_form', '~> 3.2'
+

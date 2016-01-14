@@ -1,0 +1,63 @@
+                      <div class="side-menu sidebar-inverse">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="side-menu-container">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="#">
+                                        <div class="icon fa fa-paper-plane"></div>
+                                        <% if current_user.profile %>
+                                            <div class="title">Hello <%= @user.profile.first_name %></div>
+                                        <% else %>
+                                            <div class="title">Hello</div>
+                                        <% end %>    
+                                            
+                                    </a>
+                                    <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                        <i class="fa fa-times icon"></i>
+                                    </button>
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li class="active">
+                                        <%= link_to user_path(current_user) do %>
+                                            <span class="icon fa fa-tachometer"></span><span class="title">Dashborad</span>
+                                        <% end %>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-credit-card"></span><span class="title">Payment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon fa fa-history"></span><span class="title">History</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <%= link_to new_user_car_path(current_user) do %>
+                                            <span class="icon fa fa-car"></span><span class="title">Car Info</span>
+                                        <% end %>
+                                    </li>
+                                    <li>
+                                        <%= link_to edit_user_profile_path(current_user) do %>
+                                            <span class="icon fa fa-cubes"></span><span class="title">Settings</span>
+                                        <% end %>
+                                    </li>
+                                    <li>
+                                        <a href="/contacts/new/">
+                                            <span class="icon fa fa-envelope"></span><span class="title">Contact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <span class="icon fa fa-facebook"></span><span class="title">Like Us</span>
+                                        </a>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--    <a href="#">-->
+                                    <!--        <span class="icon fa fa-thumbs-o-up"></span><span class="title">Something</span>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
