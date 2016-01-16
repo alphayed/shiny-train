@@ -3,7 +3,7 @@
                             <div class="side-menu-container">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="#">
-                                        <div class="icon fa fa-paper-plane"></div>
+                                        <div class="icon fa fa-gears fa-lg"></div>
                                         <% if current_user.profile %>
                                             <div class="title">Hello <%= @user.profile.first_name %></div>
                                         <% else %>
@@ -16,7 +16,7 @@
                                     </button>
                                 </div>
                                 <ul class="nav navbar-nav">
-                                    <li class="active">
+                                    <li>
                                         <%= link_to user_path(current_user) do %>
                                             <span class="icon fa fa-tachometer"></span><span class="title">Dashborad</span>
                                         <% end %>
@@ -32,30 +32,30 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <%= link_to new_user_car_path(current_user) do %>
+                                        <%= link_to user_cars_path(current_user) do %>
                                             <span class="icon fa fa-car"></span><span class="title">Car Info</span>
                                         <% end %>
                                     </li>
                                     <li>
                                         <%= link_to edit_user_profile_path(current_user) do %>
-                                            <span class="icon fa fa-cubes"></span><span class="title">Settings</span>
+                                            <span class="icon fa fa-gear fa-lg"></span><span class="title">Settings</span>
                                         <% end %>
                                     </li>
                                     <li>
-                                        <a href="/contacts/new/">
-                                            <span class="icon fa fa-envelope"></span><span class="title">Contact</span>
+                                        <a href="#">
+                                            <span class="icon fa fa-life-ring"></span><span class="title">Help</span>
                                         </a>
+                                    </li>
+                                    <li>
+                                        <%= link_to new_contact_path do %>
+                                            <span class="icon fa fa-envelope"></span><span class="title">Contact</span>
+                                        <% end %>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/" target="_blank">
                                             <span class="icon fa fa-facebook"></span><span class="title">Like Us</span>
                                         </a>
                                     </li>
-                                    <!--<li>-->
-                                    <!--    <a href="#">-->
-                                    <!--        <span class="icon fa fa-thumbs-o-up"></span><span class="title">Something</span>-->
-                                    <!--    </a>-->
-                                    <!--</li>-->
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
