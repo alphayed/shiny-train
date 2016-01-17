@@ -1,9 +1,9 @@
 class CarsController < ApplicationController
   before_action :find_user
-  before_action :find_car, only: [:index, :show, :edit, :update, :destroy]
+  before_action :find_car, only: [:show, :edit, :update, :destroy]
   
   def index
-     @cars = @user.cars.all.order("created_at DESC") 
+     @cars = @user.cars.all.order("created_at") 
   end
   
   def show
@@ -17,10 +17,10 @@ class CarsController < ApplicationController
   def create
     @car = current_user.cars.build(car_params)
     if @car.save
-      flash[:success] = "Info Added"
+      flash[:success] = "Car Added"
       redirect_to user_cars_path
     else
-      render "new"
+      render "index"
     end
   end 
   
@@ -30,6 +30,11 @@ class CarsController < ApplicationController
   
   def update
     
+  end
+  
+  def destroy
+		@car.destroy
+		redirect_to user_cars_path
   end
   
   private 
@@ -42,7 +47,9 @@ class CarsController < ApplicationController
     end
     
     def find_car
-      @car = Car.find( params[:user_id] )
+      unless @car = Car.find(params[:id] )
+      redirect_to user_cars_path
+      end
     end
       
 end

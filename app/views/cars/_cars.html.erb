@@ -1,7 +1,24 @@
 <%#= link_to edit_user_car_path(current_user, @car.id) do %>
-  <% @cars.each do |car| %>
-    <h2><%= @car.make %></h2>
-    <em><h3><%= @car.model %></h3></em>
-  <% end %>
-  
+  <div class="col-md-12">
+      <h1 class="text-center">Cars</h1>
+  </div>
+
+  <div class="transitions-enabled" id="cars">
+    <% @cars.each do |car| %>
+      <div class="container">
+        <div class="row">
+          
+          <div class="box panel panel-default col-md-4 col-md-offset-4">
+            <h1><%= car.make %><span><em><h4><%= car.model %></h4></em></span></h1>
+            
+            <div class="col-md-4 col-md-offset-4">
+                <%= link_to " Delete", user_car_path(current_user, car.id),  method: :delete, data: { confirm: "Are you sure?" }, class: "fa fa-trash" %>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    <% end %>
+  </div>  
+    
 <%# end %>
