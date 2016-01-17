@@ -6,6 +6,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :model
       t.string :color
       t.string :year
+      t.string :licence_plate
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false

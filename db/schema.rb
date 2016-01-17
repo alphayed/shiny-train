@@ -19,9 +19,10 @@ ActiveRecord::Schema.define(version: 20160116114459) do
     t.string   "model"
     t.string   "color"
     t.string   "year"
+    t.string   "licence_plate"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "cars", ["user_id", "created_at"], name: "index_cars_on_user_id_and_created_at"

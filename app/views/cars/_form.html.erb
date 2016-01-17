@@ -24,6 +24,11 @@
         <%= f.text_field :year, class: 'form-control' %>
     </div>
     
+    <div class="form-group">
+        <%= f.label :licence_plate %>
+        <%= f.text_field :licence_plate, class: 'form-control' %>
+    </div>
+    
     <% if current_page?(controller: 'cars', action: 'new') %>
         <div class="form-group">
             <%= f.submit "Add", class: 'btn btn-primary' %>
