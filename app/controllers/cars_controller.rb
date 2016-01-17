@@ -1,4 +1,6 @@
 class CarsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :validate_user_profile
   before_action :find_user
   before_action :find_car, only: [:show, :edit, :update, :destroy]
   
