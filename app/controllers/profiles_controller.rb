@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
         @user = User.find( params[:user_id] )
         @profile = @user.build_profile(profile_params)
         if @profile.save
-            flash[:success] = "Info Added"
+            flash[:success] = " Info Added"
             redirect_to user_path( params[:user_id] )
         else
             render action: :new
