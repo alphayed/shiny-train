@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   
   has_one :profile
   has_many :cars
+  has_many :orders
 end

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     end
 
     def validate_user
-      @user = User.find( params[:id] )
+      @user = User.find_by_id( params[:id] )
       redirect_to(user_path(current_user)) unless @user == current_user
     end
     

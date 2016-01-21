@@ -25,39 +25,7 @@
                                         </div>
                                     </a>
                                     <!-- Modal -->
-                                    <div class="bootcontainer">
-                                        <div class="modal fade" id="oil" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                            <div class="modal-dialog" role="dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="myModalLabel">Oil Change</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p style="margin-bottom: -5px;">Please Select A Car:</p>
-                                                        <% @cars.each do |car| %>
-                                                        <div class="radio">
-                                                            <label style="text-transform: uppercase;"><input type="radio" name="optradio"><%= car.make %> <%= car.licence_plate %></label>
-                                                         </div>
-                                                        <% end %>
-                                                        <div class="checkbox">
-                                                          <label>
-                                                            <input type="checkbox" value="">
-                                                            Add CareClean
-                                                          </label>
-                                                        </div>
-                                                        <div>
-                                                            <p>Your car will picked up @ <em style="text-transform: uppercase;"><%= current_user.profile.address %>.</em> <%= link_to "Change Address",  edit_user_profile_path(current_user) %></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                        <button type="button" class="btn btn-primary">Send</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <%= render "order" %>
                                     <!--end modal-->
                                 </div>
                                 <!--repairs card =====================================================================================-->
