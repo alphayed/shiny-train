@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile
     resources :cars
-    get :orders
-    post :orders
+    resources :orders
   end
   
   resources :contacts

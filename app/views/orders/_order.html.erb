@@ -9,7 +9,7 @@
                   <div class="modal-body">
                       <%# if @car %>
                           <p style="margin-bottom: -5px;">Please Select A Car:</p>
-                          <%= form_for @order, url: user_orders_path(current_user, action: 'orders')  do |f| %>
+                          <%= simple_form_for @order, url: user_orders_path(current_user)  do |f| %>
                             <% f.label :service_type %>
                             <% f.text_field :service_type, input_html: { value: 'oil change' } %>
                             <% @cars.each do |car| %>
@@ -28,7 +28,7 @@
                       
                         <div>
                             <% if current_user.profile %>
-                                <p>Your car will picked up @ <em style="text-transform: uppercase;"><%= current_user.profile.address %>.</em> <%= link_to "Change Address",  edit_user_profile_path(current_user) %></p>
+                                <p>Your car will picked up @ <em style="text-transform: uppercase;"><%= current_user.profile.address %></em> <%= link_to "Change Address",  edit_user_profile_path(current_user) %></p>
                                 <% else %>
                                 <%= link_to "Add Your Info", new_user_profile_path(current_user) %>
                             <% end %>
