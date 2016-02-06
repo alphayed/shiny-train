@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   private
     def after_sign_in_path_for(root_path)
-      session["user_return_to"] || user_path(current_user)
+      session["new_user_order_return_to"] || new_user_order_path(current_user)
     end
     
     def validate_user_profile
@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
     end
 
     def validate_user
-      @user = User.find_by_id( params[:id] )
-      redirect_to(user_path(current_user)) unless @user == current_user
+      # @user = User.find_by_id( params[:id] )
+      # redirect_to(user_path(current_user)) unless @user == current_user
     end
     
 end

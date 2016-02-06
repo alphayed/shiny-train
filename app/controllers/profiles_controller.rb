@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
         @profile = @user.build_profile(profile_params)
         if @profile.save
             flash[:success] = " Info Added"
-            redirect_to user_path( params[:user_id] )
+            redirect_to new_user_order_path( params[:user_id] )
         else
             render action: :new
         end
