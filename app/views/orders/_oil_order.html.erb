@@ -5,7 +5,7 @@
 
                   <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Oil Change</h4>
+                      <h4 class="modal-title" id="myModalLabel">Oil Change For</h4>
                   </div>
 
                   <div class="modal-body">
@@ -14,7 +14,6 @@
                       <%= f.hidden_field :service_type, value: "Oil Change" %>
 
                       <% if current_user.cars %>
-                        <p style="margin-bottom: -5px;"><strong>Please Select A Car:</strong></p>
                         <% @cars.each do |car| %>
                           <span class="text-transform: uppercase;">
                           <%= f.input :user_car, label: "", as: :radio_buttons,

@@ -18,3 +18,4 @@
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/
 //= require turbolinks
+//= require data-confirm-modal
