@@ -1,145 +1,53 @@
-    <%# if user_signed_in? %>
-    <!--  <div class="user">-->
-    <!--    <div class="flat-green">-->
-    <!--        <div class="app-container">-->
-    <!--            <div class="row content-container">-->
-    <!--                <nav class="navbar navbar-default navbar-fixed-top navbar-top">-->
-    <!--                    <div class="container-fluid">-->
-    <!--                        <div class="navbar-header">-->
-    <!--                            <button type="button" class="navbar-expand-toggle">-->
-    <!--                                <i class="fa fa-bars icon"></i>-->
-    <!--                            </button>-->
-    <!--                            <ol class="breadcrumb navbar-breadcrumb">-->
-    <!--                                <li class="active">Request A Service</li>-->
-    <!--                            </ol>-->
-    <!--                            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">-->
-    <!--                                <i class="fa fa-power-off icon"></i>-->
-    <!--                            </button>-->
-    <!--                        </div>-->
-    <!--                        <ul class="nav navbar-nav navbar-right">-->
-    <!--                            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">-->
-    <!--                                <i class="fa fa-times icon"></i>-->
-    <!--                            </button>-->
-    <!--                            <li>-->
-    <!--                                <%# if user_signed_in? %>-->
-    <!--                                    <%# if current_user.profile %> -->
-    <!--                                        <a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <%#= @user.profile.first_name %> <%#= @user.profile.last_name %></a>-->
-    <!--                                    <%# else %>-->
-    <!--                                        <%#= link_to "Add You Info", new_user_profile_path(current_user) if current_user %>-->
-    <!--                                    <%# end %>-->
-    <!--                                <%# end %>-->
-    <!--                            </li>-->
-    <!--                            <li>-->
-    <!--                                <%#= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>-->
-    <!--                            </li>-->
-                                
-    <!--                        </ul>-->
-    <!--                    </div>-->
-    <!--                </nav>-->
-    <!--                <div class="side-menu sidebar-inverse">-->
-    <!--                    <nav class="navbar navbar-default" role="navigation">-->
-    <!--                        <div class="side-menu-container">-->
-    <!--                            <div class="navbar-header">-->
-    <!--                                <a class="navbar-brand" href="#">-->
-    <!--                                    <div class="icon fa fa-paper-plane"></div>-->
-    <!--                                    <%# if current_user.profile %>-->
-    <!--                                        <div class="title">Hello <%#= @user.profile.first_name %></div>-->
-    <!--                                    <%# else %>-->
-    <!--                                        <div class="title">Hello</div>-->
-    <!--                                    <%# end %>    -->
-                                            
-    <!--                                </a>-->
-    <!--                                <button type="button" class="navbar-expand-toggle pull-right visible-xs">-->
-    <!--                                    <i class="fa fa-times icon"></i>-->
-    <!--                                </button>-->
-    <!--                            </div>-->
-    <!--                            <ul class="nav navbar-nav">-->
-    <!--                                <li>-->
-    <!--                                    <%#= link_to user_path(current_user) do %>-->
-    <!--                                        <span class="icon fa fa-tachometer"></span><span class="title">Dashborad</span>-->
-    <!--                                    <%# end %>-->
-    <!--                                </li>-->
-    <!--                                <li>-->
-    <!--                                    <a href="#">-->
-    <!--                                        <span class="icon fa fa-credit-card"></span><span class="title">Payment</span>-->
-    <!--                                    </a>-->
-    <!--                                </li>-->
-    <!--                                <li>-->
-    <!--                                    <a href="#">-->
-    <!--                                        <span class="icon fa fa-history"></span><span class="title">History</span>-->
-    <!--                                    </a>-->
-    <!--                                </li>-->
-    <!--                                <li>-->
-    <!--                                    <a href="#">-->
-    <!--                                        <span class="icon fa fa-question-circle"></span><span class="title">Help</span>-->
-    <!--                                    </a>-->
-    <!--                                </li>-->
-    <!--                                <li>-->
-    <!--                                    <%#= link_to edit_user_profile_path(current_user) do %>-->
-    <!--                                        <span class="icon fa fa-cubes"></span><span class="title">Settings</span>-->
-    <!--                                    <%# end %>-->
-    <!--                                </li>-->
-    <!--                                <li class="active">-->
-    <!--                                    <%#= link_to contacts_path do %>-->
-    <!--                                        <span class="icon fa fa-envelope"></span><span class="title">Contact</span>-->
-    <!--                                    <%# end %>-->
-    <!--                                </li>-->
-    <!--                                <li>-->
-    <!--                                    <a href="https://www.facebook.com/" target="_blank">-->
-    <!--                                        <span class="icon fa fa-facebook"></span><span class="title">Like Us</span>-->
-    <!--                                    </a>-->
-    <!--                                </li>-->
-                                    <!--<li>-->
-                                    <!--    <a href="#">-->
-                                    <!--        <span class="icon fa fa-thumbs-o-up"></span><span class="title">Something</span>-->
-                                    <!--    </a>-->
-                                    <!--</li>-->
-    <!--                            </ul>-->
-    <!--                        </div>-->
-                            <!-- /.navbar-collapse -->
-    <!--                    </nav>-->
-    <!--                </div>-->
-                    <!-- Main Content -->
-    <!--                <div class="mcontainer">  -->
-    <!--                      <div class="row">-->
-    <!--                        <div class="col-md-4 col-md-offset-4">-->
-    <!--                          <p><%# flash.each do |key, value| %>-->
-    <!--                            <%#= content_tag :div, value, class: "alert alert-#{key}" %>-->
-    <!--                          <%# end %></p>-->
-    <!--                          <h1 class="text-center">Contact Us</h1>-->
-    <!--                          <p class="text-center">Have more questions or comments?</p>-->
-    <!--                        </div>-->
+    <% if user_signed_in? %>
+        <div class="user">
+          <div class="flat-green">
+              <div class="app-container">
+                  <div class="row content-container">
+                      <!--Top nav===========================================================================================================-->
+                      <%= render partial: "users/top_nav" %>
+                      <!--Side menu begins =================================================================================================-->
+                      <%= render partial: "users/side_nav" %>
+                      <!-- Main Content==================================================================================================== --> 
+                       <div class="mcontainer">  
+                        <div class="row">
                           
+                          <div class="col-md-4 col-md-offset-4">
+                            <p><% flash.each do |key, value| %>
+                              <%= content_tag :div, value, class: "alert alert-#{key}" %>
+                            <% end %></p>
+                            <h1 class="text-center">Contact Us</h1>
+                            <p class="text-center">Have more questions or comments?</p>
+                          </div>
+                        
                       
-    <!--                        <div class="col-md-4 col-md-offset-4">-->
-    <!--                          <%#= form_for @contact do |f| %>-->
-    <!--                            <div class="form-group">-->
-    <!--                              <%#= f.label :name %>-->
-    <!--                              <%#= f.text_field :name, class: 'form-control' %>-->
-    <!--                            </div>-->
-                        
-    <!--                            <div class="form-group">-->
-    <!--                              <%#= f.label :email %>-->
-    <!--                              <%#= f.email_field :email, class: 'form-control' %>-->
-    <!--                            </div>-->
-                        
-    <!--                            <div class="form-group">-->
-    <!--                              <%#= f.label :message %>-->
-    <!--                              <%#= f.text_area :message, class: 'form-control' %>-->
-    <!--                            </div>-->
-                                
-    <!--                            <%#= f.submit 'Send', class: 'btn btn-default' %>-->
-    <!--                          <%# end %>-->
-    <!--                        </div>-->
-    <!--                      </div>-->
-    <!--                  </div>-->
-  
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
+                          <div class="col-md-4 col-md-offset-4">
+                            <%= form_for @contact do |f| %>
+                              <div class="form-group">
+                                <%= f.label :name %>
+                                <%= f.text_field :name, class: 'form-control', value: "#{current_user.profile.first_name + ' ' + current_user.profile.last_name}" %>
+                              </div>
+                      
+                              <div class="form-group">
+                                <%= f.label :email %>
+                                <%= f.email_field :email, class: 'form-control', value: "#{current_user.profile.contact_email}"  %>
+                              </div>
+                      
+                              <div class="form-group">
+                                <%= f.label :message %>
+                                <%= f.text_area :message, class: 'form-control' %>
+                              </div>
+                              
+                              <%= f.submit 'Send', class: 'btn btn-default' %>
+                            <% end %>
+                          </div>
+                        </div>
+                      <!-- End Main Content==================================================================================================== -->
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <%# else %>
+    <% else %>
 
     <div class="container">  
       <div class="row">
@@ -175,4 +83,4 @@
       </div>
   </div>
   
-<%# end %>
+<% end %>
