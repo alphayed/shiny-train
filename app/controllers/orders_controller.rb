@@ -2,13 +2,6 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :validate_user
 
-  # def new
-  #   @user = User.find( params[:user_id] )
-  #   @order = Order.new
-  # end
-  def show
-  end
-
   def new
     @profile = Profile
     @order = Order.new
@@ -18,15 +11,23 @@ class OrdersController < ApplicationController
   end
 
   def create
+    # @profile = current_user.profile
     @user = current_user
-    # unless @car = Car.find_by_id(params[:id] )
-    # redirect_to user_cars_path
-    # end
     @order = current_user.orders.build(order_params)
+
     if @order.save
-      flash[:success] = "Request sent"
+      order = current_user.orders(order_params)
+      user_email = current_user.profile.contact_email
+      service = current_user.orders
+
+      OrderMailer.order_email(order, user_email, service).deliver
+      flash.now[:success] = "Request sent"
       redirect_to new_user_order_path
     end
+  end
+
+  def show
+
   end
 
   private
