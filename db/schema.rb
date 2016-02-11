@@ -39,16 +39,19 @@ ActiveRecord::Schema.define(version: 20160119080008) do
   create_table "orders", force: :cascade do |t|
     t.string   "service_type"
     t.string   "user_car"
-    t.string   "extra_service"
+    t.integer  "extra_service"
     t.integer  "user_id"
+    t.integer  "car_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
+  add_index "orders", ["car_id", "created_at"], name: "index_orders_on_car_id_and_created_at"
+  add_index "orders", ["car_id"], name: "index_orders_on_car_id"
+  add_index "orders", ["user_id", "created_at"], name: "index_orders_on_user_id_and_created_at"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
   create_table "profiles", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone_number"
@@ -56,9 +59,13 @@ ActiveRecord::Schema.define(version: 20160119080008) do
     t.string   "address"
     t.string   "city"
     t.string   "postal_code"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "profiles", ["user_id", "created_at"], name: "index_profiles_on_user_id_and_created_at"
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -1,4 +1,3 @@
-
       <div class="modal fade" id="oil" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="dialog">
               <div class="modal-content">
@@ -13,15 +12,16 @@
 
                       <%= f.hidden_field :service_type, value: "Oil Change" %>
 
-                      <% if current_user.cars %>
-                        <% @cars.each do |car| %>
-                          <span class="text-transform: uppercase;">
-                          <%= f.input :user_car, label: "", as: :radio_buttons,
-                          collection: [car.make + ", " + car.licence_plate] %>
+                      <div>
+                        <strong><abbr title="required">*</abbr> Select A Car:</strong>
+                        <% if current_user.cars %>
+                          <% @cars.each do |car| %>
+                            <span style="text-transform: uppercase;">
+                              <%= f.input :user_car, label: false, as: :radio_buttons,
+                                collection: [car.make + ", " + car.licence_plate] %>
                           </span>
                         <% end %>
-
-                        <br>
+                      </div>
 
                         <%= f.label :Add_Car_Clean, style:"text-transform: capitalize;" %>
                         <%= f.check_box :extra_service %>
@@ -46,4 +46,3 @@
               </div>
           </div>
       </div>
-    
