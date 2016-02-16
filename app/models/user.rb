@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_one :profile
+  has_one :order
+  has_one :car
   has_many :orders
   has_many :cars
 end

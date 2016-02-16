@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   belongs_to :user
-  has_one :car
-
-  validates :user_car, presence: true
+  belongs_to :cars
+  belongs_to :car
+  validates :car_id, presence: true
 end

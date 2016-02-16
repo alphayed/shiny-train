@@ -1,6 +1,7 @@
 class Car < ActiveRecord::Base
   belongs_to :user
-  belongs_to :orders
+  has_many :orders
+  has_one :order
 
   validates :car_type, presence:true
   validates :make, presence:true

@@ -13,14 +13,10 @@
                       <%= f.hidden_field :service_type, value: "Oil Change" %>
 
                       <div>
-                        <strong><abbr title="required">*</abbr> Select A Car:</strong>
                         <% if current_user.cars %>
-                          <% @cars.each do |car| %>
                             <span style="text-transform: uppercase;">
-                              <%= f.input :user_car, label: false, as: :radio_buttons,
-                                collection: [car.make + ", " + car.licence_plate] %>
+                              <%= f.association :car, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
                           </span>
-                        <% end %>
                       </div>
 
                         <%= f.label :Add_Car_Clean, style:"text-transform: capitalize;" %>

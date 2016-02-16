@@ -13,13 +13,12 @@
 
                       <%= f.hidden_field :service_type, value: "Winterization" %>
 
-                      <% if current_user.cars %>
-                        <p style="margin-bottom: -5px;"><strong>Please Select A Car:</strong></p>
-                        <% @cars.each do |car| %>
-                          <span class="text-transform: uppercase;">
-                          <%= f.input :user_car, label: "", as: :radio_buttons, collection: [car.make + ", " + car.licence_plate] %>
+                      <div>
+                        <% if current_user.cars %>
+                            <span style="text-transform: uppercase;">
+                              <%= f.association :car, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
                           </span>
-                        <% end %>
+                      </div>
 
                         <br>
 

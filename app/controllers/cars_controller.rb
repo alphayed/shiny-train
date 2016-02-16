@@ -5,7 +5,7 @@ class CarsController < ApplicationController
   before_action :find_car, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cars = @user.cars.all.order("created_at")
+    @cars = current_user.cars.all.order("created_at")
   end
 
   def new
