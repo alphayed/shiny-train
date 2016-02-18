@@ -11,6 +11,12 @@
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <h1 class="text-center">Add Info</h1>
+
+                                    <h5 class="text-center"><% flash.each do |key, value| %>
+                                        <%= content_tag :div, value, class: "alert alert-#{key} fa fa-check-square" %>
+                                      <% end %>
+                                    </h5>
+
                                 <div>
                                     <%= render 'form' %>
                                 </div>

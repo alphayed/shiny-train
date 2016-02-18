@@ -1,37 +1,37 @@
-<%= form_for @profile, url: user_profile_path do |f| %>
+<%= simple_form_for @profile, url: user_profile_path do |f| %>
     <div class="form-group">
         <%= f.label :first_name %>
-        <%= f.text_field :first_name, class: 'form-control' %>
+        <%= f.text_field :first_name, style: 'text-transform: capitalize;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :last_name %>
-        <%= f.text_field :last_name, class: 'form-control' %>
+        <%= f.text_field :last_name, style: 'text-transform: capitalize;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :phone_number %>
         <%= f.text_field :phone_number, class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :email %>
         <%= f.text_field :contact_email, class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :address %>
-        <%= f.text_field :address, placeholder: "Your car will be pick up from this location", class: 'form-control' %>
+        <%= f.text_field :address, placeholder: "Your car will be pick up from this location", style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :city %>
         <%= f.select :city, ['Toronto'], {prompt: "Please select"}, class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :postal_code %>
-        <%= f.text_field :postal_code, class: 'form-control' %>
+        <%= f.text_field :postal_code, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
     <% if current_page?(controller: 'profiles', action: 'new') %>
         <div class="form-group">

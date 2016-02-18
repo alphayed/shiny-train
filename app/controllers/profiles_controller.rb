@@ -11,10 +11,11 @@ class ProfilesController < ApplicationController
     @profile = @user.build_profile(profile_params)
 
     if @profile.save
-      flash.now[:success] = " Info Added"
+      flash.now[:success] = " Accout Information Has Been Added"
       redirect_to new_user_order_path( params[:user_id] )
     else
-      render action: :new
+      flash[:danger] = " Please Make Sure You Have Filled Your Information Correctly"
+      render 'new'
     end
   end
 
@@ -29,9 +30,10 @@ class ProfilesController < ApplicationController
   def update
     @profile = @user.profile
     if @profile.update_attributes(profile_params)
-      flash[:success] = " Info Updated"
+      flash[:success] = " Accout Information Has Been Updated"
       redirect_to edit_user_profile_path(current_user)
     else
+      flash.now[:danger] = " Please Make Sure You Have Filled Your Information Correctly"
       render action: :edit
     end
   end
