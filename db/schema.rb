@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20160119080008) do
 
   create_table "orders", force: :cascade do |t|
     t.string   "service_type"
-    t.string   "user_car"
     t.integer  "extra_service"
     t.integer  "user_id"
     t.integer  "car_id"

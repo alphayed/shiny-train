@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
   after_action :find_car
 
   def new
-    @cars = Car.all.order("created_at")     # .order does not refere to the variable/object order
     @order = Order.new
   end
 
@@ -14,11 +13,20 @@ class OrdersController < ApplicationController
 
     if @order.save
       service_type = params[:order][:service_type]
-      user_car = params[:order][:user_car]
       extra_service = params[:order][:extra_service]
 
-      OrderMailer.order_email(@order, service_type, user_car, extra_service, current_user).deliver_now
-      flash.now[:success] = "Request sent"
+      OrderMailer.order_email(@order, service_type, extra_service, current_user).deliver_now
+      flash[:success] = "Request sent"
+      redirect_to new_user_order_path
+    else
+      unless current_user.profile
+        flash[:error] = "Request Failed, Please Add Your Account Information"
+      end
+
+      unless current_user.car
+        flash[:error] = "Request Failed, Please Add A Car To Your Account"
+      end
+
       redirect_to new_user_order_path
     end
   end
@@ -32,8 +40,9 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:user_id, :car_id, :service_type, :user_car, :extra_service)
   end
 
+  # This function allows access to the car model attributes for use in mailer
   def find_car
-     @car = Order.all
+    @car = Order.all
   end
 
 end

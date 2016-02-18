@@ -7,17 +7,17 @@
     <% @cars.each do |car| %>
       <div class="container">
         <div class="row">
-          
+
           <div class="box panel panel-default col-md-4 col-md-offset-4">
             <div class="col-xs-1 col-xs-offset-11">
-                <%= button_to "X", user_car_path(current_user, car.id),  method: :delete, data: { confirm: "Delete #{car.make}" }, class: "mbtn btn-danger mbtn-xs" %>
+              <%= button_to "X", user_car_path(current_user, car.id),  method: :delete, data: { confirm: "This Will Delete Your #{car.color + ' ' + car.make}" }, class: "mbtn btn-danger mbtn-xs" %>
             </div>
             <h1><%= car.make %><span><em><h4><%= car.model %></h4></em></span></h1>
           </div>
-        
+
         </div>
       </div>
     <% end %>
-  </div>  
-    
+  </div>
+
 <%# end %>

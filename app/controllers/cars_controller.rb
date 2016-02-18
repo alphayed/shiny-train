@@ -16,10 +16,10 @@ class CarsController < ApplicationController
     @car = current_user.cars.build(car_params)
 
     if @car.save
-      flash[:success] = "Car Added"
       redirect_to user_cars_path
     else
-      render "index"
+      flash.now[:error] = "Car Was Not Added, Make Sure You Fill All The Required Fields"
+      render "new"
     end
   end
 

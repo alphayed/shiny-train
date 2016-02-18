@@ -13,12 +13,10 @@
 
                       <%= f.hidden_field :service_type, value: "Winterization" %>
 
-                      <div>
-                        <% if current_user.cars %>
-                            <span style="text-transform: uppercase;">
-                              <%= f.association :car, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
-                          </span>
-                      </div>
+                      <% if current_user.car %>
+                        <span style="text-transform: uppercase;">
+                          <%= f.association :car, collection: current_user.cars, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
+                        </span>
 
                         <br>
 
@@ -26,13 +24,13 @@
                         <%= f.check_box :extra_service %>
 
                       <% else %>
-                        <%= link_to "Add Cars", user_cars_path(current_user) %>
+                        <%= link_to "Add Cars", user_cars_path(current_user) %> <br>
                       <% end %>
 
                       <% if current_user.profile %>
                         <p>Your car will picked up @ <em style="text-transform: uppercase;"><%= current_user.profile.address %></em> <%= link_to " Change Address",  edit_user_profile_path(current_user) %></p>
                       <% else %>
-                        <%= link_to "Add Your Info", new_user_profile_path(current_user) %>
+                        <br> <%= link_to "Add Your Info", new_user_profile_path(current_user) %>
                       <% end %>
                   </div>
 

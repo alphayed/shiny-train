@@ -10,16 +10,16 @@
                     <div class="mcontainer"> <!--The mcontainer adjusts the height for the update form found in custom.css.scss-->
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <h1 class="text-center">Edit Info</h1>
-                                
+                                <h1 class="text-center">Edit Account</h1>
+
                                     <h4 class="text-center"><% flash.each do |key, value| %>
                                         <%= content_tag :div, value, class: "alert alert-#{key} fa fa-check-square" %>
                                         <% end %></h4>
-                                        
+
                                 <div>
                                     <%= render 'form' %>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
