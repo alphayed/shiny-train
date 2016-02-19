@@ -1,5 +1,5 @@
 class OrderMailer < ActionMailer::Base
-  default to: 'ahmedm.fayed@gmail.com'
+  default to: 'support@getfixa.com'
 
   def order_email(order, service_type, extra_service, user)
     # Order info
