@@ -16,17 +16,22 @@ class OrdersController < ApplicationController
       extra_service = params[:order][:extra_service]
 
       OrderMailer.order_email(@order, service_type, extra_service, current_user).deliver_now
-      flash[:success] = "Request sent"
+      flash[:success] = " Request Sent, Thank You"
       redirect_to new_user_order_path
-    else
+    elsif
       unless current_user.profile
-        flash[:error] = "Request Failed, Please Add Your Account Information"
+        flash[:danger] = " Request Failed, Please Add Your Account Information"
+        redirect_to new_user_order_path
       end
 
+    elsif
       unless current_user.car
-        flash[:error] = "Request Failed, Please Add A Car To Your Account"
+        flash[:danger] = " Request Failed, Please Add A Car To Your Account"
+        redirect_to new_user_order_path
       end
 
+    else
+      flash[:danger] = " Please Select A Car To Your Account"
       redirect_to new_user_order_path
     end
   end

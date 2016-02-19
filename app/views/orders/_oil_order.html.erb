@@ -17,7 +17,7 @@
                           <%= f.association :car, collection: current_user.cars, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
                         </span>
 
-                        <%= f.label :Add_Car_Clean, style:"text-transform: capitalize;" %>
+                        <%= f.label :Add_Car_Clean, style: "text-transform: capitalize;" %>
                         <%= f.check_box :extra_service %>
 
                       <% else %>

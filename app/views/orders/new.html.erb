@@ -13,8 +13,12 @@
                             <div class="row">
 
                               <h5 class="text-center"><% flash.each do |key, value| %>
-                                <%= content_tag :div, value, class: "alert alert-#{key}" %>
+                                <% if key == 'success' %>
+                                  <%= content_tag :div, value, class: "alert alert-#{key} fa fa-check-square-o" %>
+                                <% else %>
+                                  <%= content_tag :div, value, class: "text-#{key} fa fa-exclamation-triangle" %>
                                 <% end %>
+                              <% end %>
                               </h5>
 
                               <div class="row no-margin-bottom">

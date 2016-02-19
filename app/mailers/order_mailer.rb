@@ -4,7 +4,6 @@ class OrderMailer < ActionMailer::Base
   def order_email(order, service_type, extra_service, user)
     # Order info
     @service_type = service_type
-    @user_car = user_car
     @extra_service = extra_service
 
     # User info

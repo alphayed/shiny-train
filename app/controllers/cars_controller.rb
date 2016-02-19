@@ -18,7 +18,7 @@ class CarsController < ApplicationController
     if @car.save
       redirect_to user_cars_path
     else
-      flash.now[:error] = "Car Was Not Added, Make Sure You Fill All The Required Fields"
+      flash.now[:danger] = " Car Was Not Added, Make Sure You Fill All The Required Fields"
       render "new"
     end
   end

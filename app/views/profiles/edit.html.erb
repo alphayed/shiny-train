@@ -12,10 +12,14 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <h1 class="text-center">Edit Account</h1>
 
-                                    <h5 class="text-center"><% flash.each do |key, value| %>
-                                        <%= content_tag :div, value, class: "text-#{key} fa fa-exclamation-triangle" %>
-                                      <% end %>
-                                    </h5>
+                                <h5 class="text-center"><% flash.each do |key, value| %>
+                                  <% if key == 'success' %>
+                                    <%= content_tag :div, value, class: "text-#{key} fa fa-check-square-o" %>
+                                  <% else %>
+                                    <%= content_tag :div, value, class: "text-#{key} fa fa-exclamation-triangle" %>
+                                  <% end %>
+                                <% end %>
+                                </h5>
 
                                 <div>
                                     <%= render 'form' %>
