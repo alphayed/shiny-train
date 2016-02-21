@@ -84,7 +84,14 @@
     border-radius: 3px;
 }
 
-abbr[title], abbr[data-original-title] {
-    cursor: help;
-    border-bottom: 1px dotted rgba(119, 119, 119, 0) !important;
+// Order modal adjustments
+.modal-body {
+      position: relative;
+          padding: 8px !important;
+}
+.modal-footer {
+  padding: 8px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+
 }
