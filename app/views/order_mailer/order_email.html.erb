@@ -139,21 +139,6 @@
                       <%= @service_type %> order request from <%= "#{ @first_name + ' ' + @last_name }." %>
                       Customer has requested <%= @extra_service %> CarClean
                       <br>
-                      Customer information:
-                      <%= @customer_id %>
-                      <%= @customer_email %>
-                      <%= @customer_phone %>
-                      <%= @customer_address %>
-                      <%= @customer_city %>
-                      <%= @customer_postal_code %>
-
-                      Car Details:
-                      <%= @car_type %>
-                      <%= @car_make %>
-                      <%= @car_model %>
-                      <%= @car_color %>
-                      <%= @car_year %>
-                      <%= @car_licence %>
                       </td>
                     </tr>
                   </table>
@@ -172,7 +157,24 @@
           <td class="sectionOdd">
             <table border="0" cellpadding="0" cellspacing="0" width="640" align="center" summary="">
 
-                    <p class="sectionTitle" style="font-size: 18px;"><%= @body %></p>
+                    <div class="sectionTitle">
+                      <h5>Customer information:</h5>
+                      <p>Order Id: <%= @order_id %></p>
+                      <p>Customer ID: <%= @customer_id %></p>
+                      <p>Email: <%= @customer_email %></p>
+                      <p>Phone Number: <%= @customer_phone %></p>
+                      <p>Address: <%= @customer_address %>,<br>
+                                  <%= @customer_city %>,<br>
+                                  <%= @customer_postal_code %></p>
+
+                      <h5>Car Details:</h5>
+                      <p>Type: <%= @car_type %></p>
+                      <p>Make: <%= @car_make %></p>
+                      <p>Model: <%= @car_model %></p>
+                      <p>Color: <%= @car_color %></p>
+                      <p>Year: <%= @car_year %></p>
+                      <p>Licence Plate: <%= @car_licence %></p>
+                    </div>
 
             </table>
           </td>
@@ -182,7 +184,7 @@
         <tr>
           <td class="sectionEven">
             <table border="0" cellpadding="0" cellspacing="0" width="640" align="center" summary="">
-              <tr><td class="sectionTitle">Click To Reply</td></tr>
+              <tr><td class="sectionTitle">Send Order Confirmation</td></tr>
                 <td class="buttonContainer">
                   <table border="0" cellpadding="0" cellspacing="0" summary="" width="30%" align="center">
                     <tr><td class="button"><%= "#{ @email }" %></td></tr>

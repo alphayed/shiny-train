@@ -5,7 +5,15 @@
                                     <i class="fa fa-bars icon"></i>
                                 </button>
                                 <ol class="breadcrumb navbar-breadcrumb">
+                                  <% if current_page?(controller: 'contacts', action: 'new') %>
+                                    <li class="active">Contact</li>
+                                  <% elsif current_page?(controller: 'profiles', action: 'edit') %>
+                                    <li class="active">Settings</li>
+                                  <% elsif current_page?(controller: 'cars', action: 'index') %>
+                                    <li class="active">My Cars</li>
+                                  <% elsif current_page?(controller: 'orders', action: 'new') %>
                                     <li class="active">Request A Service</li>
+                                  <% end %>
                                 </ol>
                                 <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                                     <i class="fa fa-power-off icon"></i>
@@ -27,7 +35,7 @@
                                 <li>
                                     <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </nav>
