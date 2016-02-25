@@ -1,3 +1,5 @@
+
+
 $font-primary: 'Source Sans Pro', Arial, sans-serif;
 
 // Overrides
@@ -9,10 +11,10 @@ $padding-base-vertical: 14px !default;
 // $brand-primary: #f64662 !default; // pink
 // $brand-primary: #2185d5 !default; // blue
 // $brand-primary: #00b8a9 !default; // turquoise
-// $brand-primary: #ff6600 !default; // orange
+$brand-primary: #ff6600 !default; // orange
 // $brand-primary: #5585b5 !default; // lightblue
 // $brand-primary: #a03232 !default; // brown
-$brand-primary: #65d269 !default; // green
+// $brand-primary: #65d269 !default; // green
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -56,29 +58,32 @@ $form-group-margin-bottom:       30px !default;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-// @font-face {
-// 	font-family: 'FontAwesome';
-//   	src: asset-url('fontawesome-webfont.eot');
-//   	src: asset-url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'), asset-url('fontawesome-webfont.woff') format('woff'), asset-url('fontawesome-webfont.ttf') format('truetype'), asset-url('fontawesome-webfont.svg#fontawesomeregular') format('svg');
-//   	font-weight: normal;
-//   	font-style: normal;
-// }
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?srf3rx');
+	src:url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
-// @mixin FontAwesome() {
+@mixin icomoon() {
 	
-// 	font-family: 'FontAwesome';
-// 	speak: none;
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	font-variant: normal;
-// 	text-transform: none;
-// 	line-height: 1;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-// 	/* Better Font Rendering =========== */
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	
-// }
+}
 
 // Import 
 @import 'bootstrap/mixins';
@@ -105,6 +110,8 @@ body {
 	background: $brand-bg-color;
 	height: 100%;
 	position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
 	
 }
 a {
@@ -488,7 +495,7 @@ h1, h2, h3, h4, h5, h6 {
 	    	border: 2px solid $brand-primary;
 	    	.popular-text {
 	    		top: 0;
-	    		left: 50%;
+	    		left: 46%;
 	    		margin-left: -54px;
 	    		margin-top: -2em;
 				position: absolute;
@@ -541,7 +548,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#fh5co-our-services,
 #fh5co-press {
 	background: #f4f4f4;
 }
@@ -550,7 +556,7 @@ h1, h2, h3, h4, h5, h6 {
 	.box {
 		// min-height: 360px;
 		padding: 30px;
-		background: $brand-white;
+		background: #f4f4f4;
 		text-align: center;
 		color: #7f7f7f;
 		margin-bottom: 70px;
@@ -621,6 +627,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-features {
 	padding: 7em 0;
+  background: #f4f4f4;
 	@media screen and (max-width: $screen-sm) {
 		padding: 4em 0;
 	}

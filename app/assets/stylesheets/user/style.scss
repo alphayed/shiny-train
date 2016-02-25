@@ -3,6 +3,8 @@
   
   html {
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   body {
@@ -10,6 +12,8 @@
     height: 100%;
     position: relative;
     font-size: 13px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   // Bootstrap Wrap
