@@ -1,8 +1,10 @@
-// User show Elements
+// User Elements
 .user {
   
   html {
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   body {
@@ -10,6 +12,8 @@
     height: 100%;
     position: relative;
     font-size: 13px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   // Bootstrap Wrap
@@ -634,8 +638,9 @@
   
   /* Card */
   .card {
+    
     background-color: #FFF;
-    border-radius: 1px;
+    border-radius: 7px;
     overflow: hidden;
     position: relative;
   

@@ -5,11 +5,11 @@
                                     <a class="navbar-brand" href="#">
                                         <div class="icon fa fa-gears fa-lg"></div>
                                         <% if current_user.profile %>
-                                            <div class="title">Hello <%= @user.profile.first_name %></div>
+                                            <div class="title">Welcome <%= @user.profile.first_name %></div>
                                         <% else %>
-                                            <div class="title">Hello</div>
-                                        <% end %>    
-                                            
+                                            <div class="title">Welcome</div>
+                                        <% end %>
+
                                     </a>
                                     <button type="button" class="navbar-expand-toggle pull-right visible-xs">
                                         <i class="fa fa-times icon"></i>
@@ -17,15 +17,15 @@
                                 </div>
                                 <ul class="nav navbar-nav">
                                     <li>
-                                        <%= link_to user_path(current_user) do %>
-                                            <span class="icon fa fa-tachometer"></span><span class="title">Dashborad</span>
+                                        <%= link_to new_user_order_path(current_user) do %>
+                                          <span class="icon fa fa-paper-plane-o"></span><span class="title">Service Request</span>
                                         <% end %>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="icon fa fa-credit-card"></span><span class="title">Payment</span>
-                                        </a>
-                                    </li>
+                                    <!-- <li> -->
+                                    <!--     <a href="#"> -->
+                                    <!--         <span class="icon fa fa&#45;credit&#45;card"></span><span class="title">Payment</span> -->
+                                    <!--     </a> -->
+                                    <!-- </li> -->
                                     <li>
                                         <a href="#">
                                             <span class="icon fa fa-history"></span><span class="title">History</span>
@@ -33,7 +33,7 @@
                                     </li>
                                     <li>
                                         <%= link_to user_cars_path(current_user) do %>
-                                            <span class="icon fa fa-car"></span><span class="title">Car Info</span>
+                                            <span class="icon fa fa-car"></span><span class="title">My Cars</span>
                                         <% end %>
                                     </li>
                                     <li>

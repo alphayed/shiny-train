@@ -6,9 +6,6 @@
 
 
 
-
-
-
 .alert-notice {
     color: #8a6d3b;
     background-color: #fcf8e3;
@@ -30,8 +27,7 @@
     padding-right: 15px;
 }
 
-
-////////////////////
+// Car Box
 #cars {
   margin: 0 auto;
   width: 100%;
@@ -57,8 +53,50 @@
 	  }
 	}
 }
-// Change font awesome fa fa trash to red
-.fa-trash:before {
-    content: "\f1f8";
-    color: red;
+
+
+// Custom button for car deletion 
+.mbtn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-group-xs>.mbtn, .mbtn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+// Removes the dots from the required fields
+abbr[title], abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted rgba(119, 119, 119, 0) !important;
+}
+
+// Order modal adjustments
+.modal-body {
+  position: relative;
+  padding: 8px !important;
+}
+.modal-footer {
+  padding: 8px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
 }

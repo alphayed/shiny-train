@@ -2,11 +2,10 @@ Rails.application.routes.draw do
   devise_for :users 
   resources :users do
     resource :profile
+    resources :orders
     resources :cars
-    get :orders
-    post :orders
   end
-  
+
   resources :contacts
   root 'pages#index' 
   # The priority is based upon order of creation: first created -> highest priority.

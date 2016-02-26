@@ -386,28 +386,28 @@ $theme-danger-color: $color-red;
 
   // Card
   .card.red {
-    background-color: $color-my-green;
-    color: $color-white;
+    color: $color-my-green;
+    background-color: $color-white;
   }
 
   .card.yellow {
-    background-color: $color-my-lightBlue;
-    color: $color-white;
+    color: $color-my-lightBlue;
+    background-color: $color-white;
   }
 
   .card.green {
-    background-color: $color-my-orange;
-    color: $color-white;
+    color: $color-my-orange;
+    background-color: $color-white;
   }
 
   .card.blue {
-    background-color: $color-my-blue;
-    color: $color-white;
+    color: $color-my-blue;
+    background-color: $color-white;
   }
 
   .card.dark {
-    background-color: $color-dark-blue;
-    color: $color-white;
+    color: $color-dark-blue;
+    background-color: $color-white;
   }
 
   .card.red , .card.yellow , .card.green , .card.blue , .card.dark {
@@ -723,6 +723,7 @@ $theme-danger-color: $color-red;
     background-color: $color-clear-green-sea;
     color: $color-darkest-green-sea;
     border-color: $color-green-sea;
+	  border-radius: 7px;
 
     .alert-link {
       color: $color-darkest-green-sea;

@@ -1,0 +1,44 @@
+<div class="modal fade" id="winterization" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Winterization</h4>
+      </div>
+
+      <div class="modal-body">
+        <%= simple_form_for @order, url: user_orders_path(current_user)  do |f| %>
+
+          <%= f.hidden_field :service_type, value: "Winterization" %>
+
+          <% if current_user.car %>
+            <span style="text-transform: uppercase;">
+              <%= f.association :car, collection: current_user.cars, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
+            </span>
+
+            <br>
+
+            <%= f.label :Add_Car_Clean, style:"text-transform: capitalize;" %>
+            <%= f.check_box :extra_service %>
+
+          <% else %>
+            <%= link_to "Add Cars", user_cars_path(current_user) %> <br>
+          <% end %>
+
+          <% if current_user.profile %>
+            <p>Your car will picked up @ <em style="text-transform: uppercase;"><%= current_user.profile.address %></em> <%= link_to " Change Address",  edit_user_profile_path(current_user) %></p>
+          <% else %>
+            <br> <%= link_to "Add Your Info", new_user_profile_path(current_user) %>
+        <% end %>
+
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn&#45;default pull&#45;right" data&#45;dismiss="modal">Cancel</button> -->
+          <%= f.submit "Send", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

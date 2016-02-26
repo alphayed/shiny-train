@@ -69,3 +69,5 @@ gem 'paperclip', '~> 4.3'
 gem 'simple_form', '~> 3.2'
 #
 gem 'masonry-rails', '~> 0.2.4'
+#
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'

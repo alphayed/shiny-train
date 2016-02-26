@@ -1,0 +1,106 @@
+    <div class="user">
+        <div class="flat-green">
+            <div class="app-container">
+                <div class="row content-container">
+                    <!--Top nav===========================================================================================================-->
+                    <%= render 'users/top_nav' %>
+                    <!--Side menu begins =================================================================================================-->
+                    <%= render 'users/side_nav' %>
+                    <!-- Main Content==================================================================================================== -->
+
+                    <div class="container-fluid">
+                        <div class="side-body half-padding">
+                            <div class="row">
+
+                              <h5 class="text-center"><% flash.each do |key, value| %>
+                                <% if key == 'success' %>
+                                  <%= content_tag :div, value, class: "alert alert-#{key} fa fa-check-square-o" %>
+                                <% else %>
+                                  <%= content_tag :div, value, class: "text-#{key} fa fa-exclamation-triangle" %>
+                                <% end %>
+                              <% end %>
+                              </h5>
+
+                              <div class="row no-margin-bottom">
+                                <!--oil card =============================================================================================-->
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                  <a herf="#"role="button" data-toggle="modal" data-target="#oil">
+                                    <div class="card green summary-inline">
+                                      <div class="card-body">
+                                        <i class="icon fa fa-tint fa-4x"></i>
+                                        <div class="content">
+                                          <div class="title">Oil Change</div>
+                                          <div class="sub-title">+ MultiPoint Inspection</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <!-- Modal -->
+                                  <%= render "oil_order" %>
+                                  <!--end modal-->
+                                </div>
+                                <!--repairs card ========================================================================================-->
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                  <a herf="#"role="button" data-toggle="modal" data-target="#repairs">
+                                    <div class="card blue summary-inline">
+                                      <div class="card-body">
+                                        <i class="icon fa fa-wrench fa-4x"></i>
+                                        <div class="content">
+                                          <div class="title">Repairs</div>
+                                          <div class="sub-title">New</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <!-- Modal -->
+                                  <%= render "repair_order" %>
+                                  <!--end modal-->
+                                </div>
+                                <!--CarClean card =====================================================================================-->
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                  <a herf="#"role="button" data-toggle="modal" data-target="#CarClean">
+                                    <div class="card red summary-inline">
+                                      <div class="card-body">
+                                        <i class="icon fa fa-leaf fa-4x"></i>
+                                        <div class="content">
+                                          <div class="title">CarClean</div>
+                                          <div class="sub-title">New</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <!-- Modal -->
+                                  <%= render "clean_order" %>
+                                  <!--end modal-->
+                                </div>
+                                <!--winterization card =====================================================================================-->
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                  <a herf="#"role="button" data-toggle="modal" data-target="#winterization">
+                                    <div class="card yellow summary-inline">
+                                      <div class="card-body">
+                                        <i class="icon fa fa-shield fa-4x"></i>
+                                        <div class="content">
+                                          <div class="title">Winterization</div>
+                                          <div class="sub-title">+ Rust Proofing</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <!-- Modal -->
+                                <%= render "winter_order" %>
+                                <!--end modal-->
+                               </div>
+                              </div>
+                            </div>
+                        </div>
+                    <!-- End Main Content==================================================================================================== -->
+                </div>
+            </div>
+        </div>
+    </div>
+

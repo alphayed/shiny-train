@@ -3,32 +3,32 @@
         <%= f.label :car_type %>
         <%= f.select :car_type, ['Sedan', 'Coupe', 'SUV', 'Wagon/Hatchback', 'Pickup Truck', 'Minivan', 'Van'], {prompt: "Please select"}, class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :make %>
-        <%= f.text_field :make, class: 'form-control' %>
+        <%= f.text_field :make, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :model %>
-        <%= f.text_field :model, class: 'form-control' %>
+        <%= f.text_field :model, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :color %>
-        <%= f.text_field :color, class: 'form-control' %>
+        <%= f.text_field :color, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :year %>
-        <%= f.text_field :year, class: 'form-control' %>
+        <%= f.text_field :year, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <div class="form-group">
         <%= f.label :licence_plate %>
-        <%= f.text_field :licence_plate, class: 'form-control' %>
+        <%= f.text_field :licence_plate, style: 'text-transform: uppercase;', class: 'form-control' %>
     </div>
-    
+
     <% if current_page?(controller: 'cars', action: 'new') %>
         <div class="form-group">
             <%= f.submit "Add", class: 'btn btn-primary' %>
