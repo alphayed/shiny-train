@@ -1,4 +1,13 @@
-<%= simple_form_for @profile, url: user_profile_path do |f| %>
+<%= simple_form_for @profile, url: user_profile_path, input_html: { multipart: true  } do |f| %>
+    <div class="form-group">
+        <%= f.input :avatar, as: :file, label: false, class: 'form-control' %>
+    <% if current_page?(controller: 'profiles', action: 'new') %>
+        <p class="help-block">Add profile picture</p>
+    <% else %>
+        <p class="help-block">Edit profile picture</p>
+      <% end %>
+    </div>
+
     <div class="form-group">
         <%= f.label :first_name %>
         <%= f.text_field :first_name, style: 'text-transform: capitalize;', class: 'form-control' %>
@@ -39,7 +48,7 @@
         </div>
     <% else %>
         <div class="form-group">
-            <%= f.submit "Update", class: 'btn btn-primary' %>
+            <%= f.submit "Update", class: 'btn btn-defualt' %>
         </div>
     <% end %>
 <% end %>
