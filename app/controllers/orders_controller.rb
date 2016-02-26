@@ -14,8 +14,9 @@ class OrdersController < ApplicationController
     if @order.save
       service_type = params[:order][:service_type]
       extra_service = params[:order][:extra_service]
+      description = params[:order][:description]
 
-      OrderMailer.order_email(@order, service_type, extra_service, current_user).deliver_now
+      OrderMailer.order_email(@order, service_type, extra_service, description, current_user).deliver_now
       flash[:success] = " Request Sent, Thank You"
       redirect_to new_user_order_path
     elsif

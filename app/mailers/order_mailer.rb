@@ -1,11 +1,12 @@
 class OrderMailer < ActionMailer::Base
   default to: 'support@getfixa.com'
 
-  def order_email(order, service_type, extra_service, user)
+  def order_email(order, service_type, extra_service, description, user)
     # Order info
     @order_id = user.order.id
     @service_type = service_type
     @extra_service = extra_service
+    @description = description
 
     # User info
     @customer_id = user.id

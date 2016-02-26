@@ -137,7 +137,10 @@
                     <tr>
                       <td class="featuredContent">
                       <%= @service_type %> order request from <%= "#{ @first_name + ' ' + @last_name }." %>
-                      Customer has requested <%= @extra_service %> CarClean
+                      <% if @service_type == 'Repairs' %>
+                        <p>Description of issue: <%= @description %></p>
+                      <% end %>
+                      Customer has requested <%= @extra_service %> CarClean.
                       <br>
                       </td>
                     </tr>

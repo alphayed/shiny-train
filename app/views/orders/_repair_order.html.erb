@@ -15,11 +15,13 @@
           <% if current_user.car %>
             <span style="text-transform: uppercase;">
               <%= f.association :car, collection: current_user.cars, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
-            </span>
+            </span><br />
 
-            <br>
+            <div class="form-group">
+              <%= f.text_field :description, placeholder: "Description the problem eg: 'ABS Light ON'", class: 'form-control' %><br />
+            </div>
 
-            <%= f.label :Add_Car_Clean, style:"text-transform: capitalize;" %>
+            <%= f.label :Add_Car_Clean, label: 'Add CarClean', style:"text-transform: capitalize;" %>
             <%= f.check_box :extra_service %>
 
           <% else %>

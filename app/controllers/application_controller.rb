@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
+  # Redirects user to user order page if signed in
   def after_sign_in_path_for(root_path)
     session["new_user_order_return_to"] || new_user_order_path(current_user)
   end

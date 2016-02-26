@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160119080008) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.text     "description"
     t.string   "service_type"
     t.integer  "extra_service"
     t.integer  "user_id"
