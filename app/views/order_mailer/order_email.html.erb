@@ -140,7 +140,11 @@
                       <% if @service_type == 'Repairs' %>
                         <p>Description of issue: <%= @description %></p>
                       <% end %>
-                      Customer has requested <%= @extra_service %> CarClean.
+                      <% if @service_type == 'CarClean' %>
+                        Customer has requested <%= @extra_service %> FullFuel.
+                      <% else %>
+                        Customer has requested <%= @extra_service %> CarClean.
+                      <% end %>
                       <br>
                       </td>
                     </tr>

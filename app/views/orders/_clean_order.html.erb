@@ -17,7 +17,8 @@
               <%= f.association :car, collection: current_user.cars, as: :radio_buttons, label: 'Select A Car:', label_method: lambda { |car| "#{car.make} | #{car.licence_plate}"  } , value_method: :id, include_blank: false %>
             </span>
 
-            <br>
+            <%= f.label :extra_service, label: 'Add FullFuel', style:"text-transform: capitalize;" %>
+            <%= f.check_box :extra_service %>
 
           <% else %>
             <%= link_to "Add Cars", user_cars_path(current_user) %> <br>
