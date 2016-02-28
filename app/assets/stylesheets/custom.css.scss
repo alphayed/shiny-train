@@ -109,3 +109,68 @@ abbr[title], abbr[data-original-title] {
   padding: 10px;
   overflow: hidden;
 }
+
+// Scroll over background in index page
+.scroll-over{
+  padding: 7em 0;
+  background: url("/img/repair.jpg") no-repeat top center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  p {
+    margin-bottom: 1.5em;
+    color: white;
+  }
+}
+
+.text-style {
+	float: left;
+	width: 100%;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	clear: both;
+	h2 {
+			color: rgba(255,255,255,1);
+			&:after {
+				background: rgba(255,255,255,.2);
+			}
+		font-size: 50px;
+		font-weight: 300;
+		// letter-spacing: 2px;
+		color: white;
+		text-transform: uppercase;
+		position: relative;
+		display: block;
+		padding-bottom: 20px;
+		line-height: 1.5;
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 80px;
+			height: 2px;
+			background: #ff6600;
+			left: 50%;
+			margin-left: -40px;
+			bottom: 0;
+		}
+		@media screen and (max-width: $screen-sm) {
+			font-size: 30px;
+		}
+	}
+	h3 {
+		font-weight: 300;
+		line-height: 1.5;
+		color: white;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 24px!important;
+			line-height: 34px;
+		}
+		.subtext {
+			h3 {
+				color: rgba(255,255,255,.5);
+			}
+		}
+	}
+}
