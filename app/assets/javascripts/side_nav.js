@@ -5,3 +5,12 @@ $(document).ready(function(){
     $(this).addClass("active");
 });
 });
+
+// Fixed double tap issue on ios devices
+$(document).ready(function() {
+  $('a').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+  });
+});
