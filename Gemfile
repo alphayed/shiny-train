@@ -58,7 +58,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
+
 end
 
 # Use devise for user authentication
@@ -69,5 +69,7 @@ gem 'paperclip', '~> 4.3'
 gem 'simple_form', '~> 3.2'
 #
 gem 'masonry-rails', '~> 0.2.4'
-#
+# Modal for user orders
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+# Amazon Ruby SDK
+gem 'aws-sdk', '~> 2'
