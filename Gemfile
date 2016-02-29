@@ -67,7 +67,7 @@ gem 'devise', '~> 3.5'
 gem 'paperclip', '~> 4.3'
 # Use simple form for manging forms
 gem 'simple_form', '~> 3.2'
-#
+# Masonry lib
 gem 'masonry-rails', '~> 0.2.4'
 # Modal for user orders
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
