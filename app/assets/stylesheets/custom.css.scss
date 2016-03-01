@@ -7,24 +7,24 @@
 
 
 .alert-notice {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
 }
 
 .alert-alert {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
 }
 
 // Adjusts the height form container in profile edit page
 .mcontainer {
-    margin-right: auto;
-    margin-top: 65px;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  margin-right: auto;
+  margin-top: 65px;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 // Car Box
@@ -32,62 +32,62 @@
   margin: 0 auto;
   width: 100%;
   .box {
-	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-	  border-radius: 7px;
-	  text-align: center;
-	  img {
-	  	max-width: 100%;
-	  	height: auto;
-	  }
-	  h1 {
-	  	text-transform: uppercase;
-	  }
-	  h4 {
-	  	text-transform: uppercase;
-	  }
-	  .user {
-	  	font-size: 12px;
-	  	border-top: 1px solid #EAEAEA;
-			padding: 15px;
-			margin: 0;
-	  }
-	}
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+    h4 {
+      text-transform: uppercase;
+    }
+    .user {
+      font-size: 12px;
+      border-top: 1px solid #EAEAEA;
+      padding: 15px;
+      margin: 0;
+    }
+  }
 }
 
 
-// Custom button for car deletion 
+// Custom button for car deletion
 .mbtn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 .btn-group-xs>.mbtn, .mbtn-xs {
-    padding: 1px 5px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
 
 // Removes the dots from the required fields
 abbr[title], abbr[data-original-title] {
-    cursor: help;
-    border-bottom: 1px dotted rgba(119, 119, 119, 0) !important;
+  cursor: help;
+  border-bottom: 1px dotted rgba(119, 119, 119, 0) !important;
 }
 
 // Order modal adjustments
@@ -125,97 +125,97 @@ abbr[title], abbr[data-original-title] {
 }
 
 .text-style {
-	float: left;
-	width: 100%;
-	padding-bottom: 50px;
-	margin-bottom: 50px;
-	clear: both;
-	h2 {
-			color: rgba(255,255,255,1);
-			&:after {
-				background: rgba(255,255,255,.2);
-			}
-		font-size: 50px;
-		font-weight: 300;
-		// letter-spacing: 2px;
-		color: white;
-		text-transform: uppercase;
-		position: relative;
-		display: block;
-		padding-bottom: 20px;
-		line-height: 1.5;
-		&:after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 80px;
-			height: 2px;
-			background: #ff6600; //$brand-primary
-			left: 50%;
-			margin-left: -40px;
-			bottom: 0;
-		}
-		@media screen and (max-width: $screen-sm) {
-			font-size: 30px;
-		}
-	}
-	h3 {
-		font-weight: 300;
-		line-height: 1.5;
-		color: white;
-		@media screen and (max-width: $screen-sm) {
-			font-size: 24px!important;
-			line-height: 34px;
-		}
-		.subtext {
-			h3 {
-				color: rgba(255,255,255,.5);
-			}
-		}
-	}
+  float: left;
+  width: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  clear: both;
+  h2 {
+    color: rgba(255,255,255,1);
+    &:after {
+      background: rgba(255,255,255,.2);
+    }
+    font-size: 50px;
+    font-weight: 300;
+    // letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: #ff6600; //$brand-primary
+      left: 50%;
+      margin-left: -40px;
+      bottom: 0;
+    }
+    @media screen and (max-width: $screen-sm) {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-weight: 300;
+    line-height: 1.5;
+    color: white;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 24px!important;
+      line-height: 34px;
+    }
+    .subtext {
+      h3 {
+        color: rgba(255,255,255,.5);
+      }
+    }
+  }
 }
 
 // About Us section modifications
 
 .about-heading {
-	float: left;
-	width: 100%;
-	padding-bottom: 50px;
-	margin-bottom: 50px;
-	clear: both;
-	h2 {
-		font-size: 50px;
-		font-weight: 300;
-		// letter-spacing: 2px;
-		color: #444;
-		text-transform: uppercase;
-		position: relative;
-		display: block;
-		padding-bottom: 20px;
-		line-height: 1.5;
-		&:after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 80px;
-			height: 2px;
-			background: #ff6600; //$brand-primary
-			left: 5%;
-			margin-left: 5px;
-			bottom: 0;
-		}
-		@media screen and (max-width: $screen-sm) {
-			font-size: 30px;
-		}
-	}
-	h3 {
-		font-weight: 300;
-		line-height: 1.5;
-		color: #929292;
-		@media screen and (max-width: $screen-sm) {
-			font-size: 24px!important;
-			line-height: 34px;
-		}
-	}
+  float: left;
+  width: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  clear: both;
+  h2 {
+    font-size: 50px;
+    font-weight: 300;
+    // letter-spacing: 2px;
+    color: #444;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: #ff6600; //$brand-primary
+      left: 5%;
+      margin-left: 5px;
+      bottom: 0;
+    }
+    @media screen and (max-width: $screen-sm) {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-weight: 300;
+    line-height: 1.5;
+    color: #929292;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 24px!important;
+      line-height: 34px;
+    }
+  }
 }
 
