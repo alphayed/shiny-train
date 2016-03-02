@@ -9,7 +9,7 @@
             <% if current_user.profile %>
               <% if current_user.profile.avatar? %>
                 <div class="pull-left">
-                  <%= image_tag @user.profile.avatar.url, class: 'img-circle img-responsive', width: '50', height: '50' %>
+                  <%= image_tag @user.profile.avatar.url, class: 'no-oval-thumb img-circle img-responsive', width: '50', height: '50' %>
                 </div>
               <% else %>
                 <div class="pull-left">

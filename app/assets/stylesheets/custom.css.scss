@@ -219,3 +219,18 @@ abbr[title], abbr[data-original-title] {
   }
 }
 
+// Fix for user img oval issue
+.no-oval{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  display:block;
+  background-position-y:25%;
+}
+.no-oval-thumb{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:block;
+  background-position-y:25%;
+}
