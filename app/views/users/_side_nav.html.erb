@@ -4,25 +4,33 @@
       <div class="navbar-header">
         <div class="navbar-brand">
           <div class="user-panel">
+
             <!-- <div class="icon fa fa&#45;gears fa&#45;lg"></div> -->
             <% if current_user.profile %>
-                <div class="pull-left">
               <% if current_user.profile.avatar? %>
+                <div class="pull-left">
                   <%= image_tag @user.profile.avatar.url, class: 'img-circle img-responsive', width: '50', height: '50' %>
-              <% else %>
-                  <img class="img-circle img-responsive", width="50", height="50" src="/img/img.jpg" alt="Default Img" /><br />
-              <% end %>
                 </div>
+              <% else %>
+                <div class="pull-left">
+                  <img class="img-circle img-responsive", width="50", height="50" src="/img/img.jpg" alt="Default Img" />
+                </div>
+              <% end %>
               <div class="title"><%= @user.profile.first_name %></div>
             <% else %>
+              <div class="pull-left">
+                <img class="img-circle img-responsive", width="50", height="50" src="/img/img.jpg" alt="Default Img" />
+              </div>
               <div class="title">Welcome</div>
             <% end %>
-          </div>
 
+          </div>
         </div>
+
         <button type="button" class="navbar-expand-toggle pull-right visible-xs">
           <i class="fa fa-times icon"></i>
         </button>
+
       </div>
       <ul class="nav navbar-nav">
         <li>

@@ -16,6 +16,13 @@
                                         <%= content_tag :div, value, class: "alert alert-#{key} fa fa-check-square" %>
                                       <% end %>
                                     </h5>
+                          <% if current_user.profile %>
+                            <%= image_tag @user.profile.avatar.url, class: 'img-circle img-responsive', width: '100', height: '100' %><br />
+                          <% else %>
+                            <div>
+                              <img class="img-circle img-responsive", width="100", height="100" src="/img/img.jpg" alt="Default Img" /><br />
+                            </div>
+                          <% end %>
 
                                 <div>
                                     <%= render 'form' %>
