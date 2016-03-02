@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 // Fix double tap issue on ios devices
 $(document).ready(function() {
-  $('#side-menu > a').on('click touchstart', function(e) {
+  $('li > a').on('click touchstart', function(e) {
     var el = $(this);
     var link = el.attr('href');
     window.location = link;
