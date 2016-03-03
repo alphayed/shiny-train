@@ -13,12 +13,10 @@ $(document).ready(function() {
     var link = el.attr('href');
     window.location = link;
   });
+
+  $('.side-menu-container > button').on('click touchstart', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+  });
 });
-// $navbar-nav.on('touchstart mouseenter focus', function(e) {
-//   if(e.type == 'touchstart') {
-//     // Don't trigger mouseenter even if they hold
-//     e.stopImmediatePropagation();
-//     // If $item is a link (<a>), don't go to said link on mobile, show menu instead
-//     e.preventDefault();
-//   }
-// });
