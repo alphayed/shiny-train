@@ -72,4 +72,6 @@ gem 'masonry-rails', '~> 0.2.4'
 # Modal for user orders
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 # Amazon Ruby SDK
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 1.6'
+# Secures sensitive configuration information
+gem 'figaro', '~> 1.1', '>= 1.1.1'

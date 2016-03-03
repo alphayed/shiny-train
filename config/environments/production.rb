@@ -83,15 +83,16 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address => "smpt.sendgrind.net",
     :port    => 25,
-    :domain  => 'evening-spire-6283.herokuapp.com'
+    :domain  => 'sheltered-river-8306.herokuapp.com'
   }
-  # Paperclip config for AWS S3
+  # Paperclip AWS config
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['S3_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    storage: :s3,
+    bucket: ENV['S3_BUCKET_NAME'],
+    s3_permissions: "public-read",
+    s3_credentials: {
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 end
