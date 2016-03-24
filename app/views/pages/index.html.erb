@@ -1,361 +1,299 @@
-<div id="fh5co-offcanvass">
-		<ul>
-			<li><a href="#" data-nav-section="design">How It Works</a></li>
-			<li><a href="#" data-nav-section="features">Services</a></li>
-			<li><a href="#" data-nav-section="about">About</a></li>
-			<li><a href="#" data-nav-section="pricing">Pricing</a></li>
-			<li><a href="#" data-nav-section="faqs">FAQs</a></li>
-			<li><a href="#" data-nav-section="faqs">Availability</a></li>
+  <div id="fh5co-offcanvass">
+    <ul>
+      <li><a href="#" data-nav-section="design">How It Works</a></li>
+      <li><a href="#" data-nav-section="features">Services</a></li>
+      <li><a href="#" data-nav-section="about">About</a></li>
+      <li><a href="#" data-nav-section="pricing">Pricing</a></li>
+      <li><a href="#" data-nav-section="faqs">FAQs</a></li>
+      <li id="accordion-map"><a href="#" data-nav-section="service-area">Availability</a></li>
+    </ul>
+    <% if user_signed_in? %>
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: 'fh5co-lead btn btn-primary btn-sm' %>
+    <% else %>
+      <%= button_to "Log In", new_user_session_path, class: 'fh5co-lead btn btn-primary btn-sm', method: :get %>
+    <% end %>
+  </div>
 
-		</ul>
-		<% if user_signed_in? %>
-            <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: 'fh5co-lead btn btn-primary btn-sm' %>
-          <% else %>
-            <%= button_to "Log In", new_user_session_path, class: 'fh5co-lead btn btn-primary btn-sm', method: :get %>
-          <% end %>
-	</div>
-	
-	<div id="fh5co-menu" class="navbar">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
-        <a class="navbar-brand" href="#" data-nav-section="home" style="font-weight: bold;">F I X A <em style="font-size: 12px; color: gray">JUST DRIVE</em></a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="fh5co-menu" class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
+          <!-- <a class="logo" href="#" data&#45;nav&#45;section="home">I</a> -->
+          <a class="navbar-brand" href="#" data-nav-section="home" style="font-weight: bold;">F I X A <em style="font-size: 12px; color: gray">JUST DRIVE</em></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div id="fh5co-page">
-		<div id="fh5co-wrap">
-			<header id="fh5co-hero" data-section="home" role="banner" style="background: url(https://fixa-assets.s3.amazonaws.com/img/just_drive.jpg) top left; background-size: cover;" >
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-intro">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-md-6 fh5co-text">
-								<h2 class="to-animate intro-animate-1">We take car maintenance to the next level.</h2>
-								<p class="to-animate intro-animate-2">Because no one likes hauling the kids, driving two cars or having to wait while their car is being serviced or cleaned. We are putting the 'smart' into maintaining your car. So, it's car maintenance, with a click.</p>
-								<p class="to-animate intro-animate-3"><a href="#" class="btn btn-primary btn-md"><i class="icon-gears"></i> Use our web app</a></p>
-							</div>
-							<!-- <div class="col&#45;md&#45;6 text&#45;right fh5co&#45;intro&#45;img to&#45;animate intro&#45;animate&#45;4"> -->
-							<!-- 	<img src="images/iphone_6_3.png" alt="Outline Free HTML5 Responsive Bootstrap Template"> -->
-							<!-- </div> -->
+  <div id="fh5co-page">
+    <div id="fh5co-wrap">
+      <header id="fh5co-hero" data-section="home" role="banner" style="background: url(https://fixa-assets.s3.amazonaws.com/img/just_drive.jpg) top left; background-size: cover;" >
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-intro">
+          <div class="container">
+            <div class="row">
 
-						</div>
-					</div>						
-				</div>
-			</header>
-			<!-- END .header -->
-			
-			<div id="fh5co-main">
-				<!-- <div id="fh5co&#45;clients"> -->
-				<!-- 	<div class="container"> -->
-				<!-- 		<div class="row text&#45;center"> -->
-				<!-- 			<div class="col&#45;md&#45;3 col&#45;sm&#45;6 col&#45;xs&#45;6 to&#45;animate"> -->
-				<!-- 				<figure class="fh5co&#45;client"><img src="images/client_1.png" alt="Free HTML5 Template"></figure> -->
-				<!-- 			</div> -->
-				<!-- 			<div class="col&#45;md&#45;3 col&#45;sm&#45;6 col&#45;xs&#45;6 to&#45;animate"> -->
-				<!-- 				<figure class="fh5co&#45;client"><img src="images/client_2.png" alt="Free HTML5 Template"></figure> -->
-				<!-- 			</div> -->
-				<!-- 			<div class="col&#45;md&#45;3 col&#45;sm&#45;6 col&#45;xs&#45;6 to&#45;animate"> -->
-				<!-- 				<figure class="fh5co&#45;client"><img src="images/client_3.png" alt="Free HTML5 Template"></figure> -->
-				<!-- 			</div> -->
-				<!-- 			<div class="col&#45;md&#45;3 col&#45;sm&#45;6 col&#45;xs&#45;6 to&#45;animate"> -->
-				<!-- 				<figure class="fh5co&#45;client"><img src="images/client_4.png" alt="Free HTML5 Template"></figure> -->
-				<!-- 			</div> -->
-				<!-- 		</div> -->
-				<!-- 	</div> -->
-				<!-- </div> -->
-				
-					
-					<div id="fh5co-features-2" data-section="design">
-					<div class="fh5co-features-2-content">
-					    <div class="container">
-					    	<div class="row">
-					    		<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-									<h2 class="fh5co-lead to-animate">So, How does it works?</h2>
-									<p class="fh5co-sub to-animate">Ok so you want to know what we are all about. Basically, We do the part that no one likes about owning a car and you, you <i>JUST DRIVE.</i></p>
-								</div>
-					    		<div class="col-md-4 fh5co-text-wrap">
-					    			<div class="row text-center">
-						    			<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-3">
-						    				<span class="fh5co-icon"><i class="fa fa-paper-plane"></i></span>
-											<h4 class="fh5co-uppercase-sm">Send Us A Request</h4>
-											<p>Use the web app to send us a service request. The next day, our trained runner will pick up your car and drive it to one of our top rated, hand picked service or cleaning facility.</p>
-										</div>
-										<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-4">
-											<span class="fh5co-icon"><i class="fa fa-map-marker"></i></span>
-											<h4 class="fh5co-uppercase-sm">Track</h4>
-											<p>Once service has been completed, you can track your car live from the moment it leaves the repair or cleaning facility. Need to contact your runner? No problem, you will be able to call or text them directly through the app.</p>
-										</div>
-										
-									</div>
-					    		</div>
-					    		<div class="col-md-4 col-md-push-4 fh5co-text-wrap">
-					    			<div class="row text-center">
-						    			<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-5">
-						    				<span class="fh5co-icon"><i class="fa fa-child"></i></span>
-											<h4 class="fh5co-uppercase-sm">Drop off</h4>
-											<p>We will drop back your car and hand you the key. That's it that simple. No more booking appoinments, no more waiting.</p>
-										</div>
-										<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-6">
-											<span class="fh5co-icon"><i class="fa fa-bed"></i></span>
-											<h4 class="fh5co-uppercase-sm">Peace of mind</h4>
-											<p>We stand behind our service, all work done is fully guarenteed for 90 days. And with our $5M General Liability and $1M Garage Keepers policy you can sleep well knowing that you and your car are protected.</p>
-										</div>
-										
-									</div>
-					    		</div>
-					    		<div class="col-md-4 col-md-pull-4 fh5co-image animate-object features-2-animate-2">
-					    			<p class="text-center">
-					    			<img src="https://fixa-assets.s3.amazonaws.com/img/iphone-1.jpeg" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
-					    			</p>
-					    		</div>
-					    		
-					    	</div>
-					    </div>
-					</div>	
+              <div class="col-md-6 fh5co-text">
+                <h2 class="to-animate intro-animate-1">We take car maintenance to the next level.</h2>
+                <p class="to-animate intro-animate-2">Because no one likes hauling the kids, driving two cars or having to wait while their car is being serviced or cleaned. We are putting the 'smart' into maintaining your car. So, it's car maintenance, with a click.</p>
+                <p class="to-animate intro-animate-3"><a href="#" class="btn btn-primary btn-md"><i class="icon-gears"></i> Use our web app</a></p>
+              </div>
 
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END .header -->
 
+      <div id="fh5co-main">
+        <div id="fh5co-features-2" data-section="design">
+          <div class="fh5co-features-2-content">
+            <div class="container">
+              <div class="row">
 
-					
-				
+                <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                  <h2 class="fh5co-lead to-animate">So, How does it works?</h2>
+                  <p class="fh5co-sub to-animate">Ok so you want to know what we are all about. Basically, We do the part that no one likes about owning a car and you, you <i id="slogen">JUST DRIVE.</i></p>
+                </div>
 
+                <div class="col-md-4 fh5co-text-wrap">
+                  <div class="row text-center">
+                    <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-3">
+                      <span class="fh5co-icon"><i class="fa fa-paper-plane"></i></span>
+                      <h4 class="fh5co-uppercase-sm">Send Us A Request</h4>
+                      <p>Use the web app to send us a service request. The next day, our trained runner will pick up your car and drive it to one of our top rated, hand picked service or cleaning facility.</p>
+                    </div>
 
-			    
+                    <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-4">
+                      <span class="fh5co-icon"><i class="fa fa-map-marker"></i></span>
+                      <h4 class="fh5co-uppercase-sm">Track</h4>
+                      <p>Once service has been completed, you can track your car live from the moment it leaves the repair or cleaning facility. Need to contact your runner? No problem, you will be able to call or text them directly through the app.</p>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="col-md-4 col-md-push-4 fh5co-text-wrap">
+                  <div class="row text-center">
+                    <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-5">
+                      <span class="fh5co-icon"><i class="fa fa-child"></i></span>
+                      <h4 class="fh5co-uppercase-sm">Drop off</h4>
+                      <p>We will drop back your car and hand you the key. That's it that simple. No more booking appoinments, no more waiting.</p>
+                    </div>
+                    <div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-6">
+                      <span class="fh5co-icon"><i class="fa fa-bed"></i></span>
+                      <h4 class="fh5co-uppercase-sm">Peace of mind</h4>
+                      <p>We stand behind our service, all work done is fully guarenteed for 90 days. And with our $5M General Liability and $1M Garage Keepers policy you can sleep well knowing that you and your car are protected.</p>
+                    </div>
 
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-pull-4 fh5co-image animate-object features-2-animate-2">
+                  <p class="text-center">
+                  <img src="https://fixa-assets.s3.amazonaws.com/img/iphone-1.jpeg" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+                  </p>
+                </div>
 
-			    
-				<div id="fh5co-counter" class="fh5co-bg-section" style="background-image: url(https://fixa-assets.s3.amazonaws.com/img/gears.jpg); background-attachment: fixed;">
-					<div class="fh5co-overlay"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="fh5co-hero-wrap">
-									<div class="fh5co-hero-intro text-center to-animate counter-animate">
-										<div class="col-md-4 text-center">
-											<span class="fh5co-counter js-counter" data-from="0" data-to="28" data-speed="5000" data-refresh-interval="50"></span>
-											<span class="fh5co-counter-label">Customers</span>
-											
-										</div>
-										<div class="col-md-4 text-center">
-											<span class="fh5co-counter js-counter" data-from="0" data-to="57" data-speed="5000" data-refresh-interval="50"></span>
-											<span class="fh5co-counter-label">Completed Apps</span>
-										</div>
-										<div class="col-md-4 text-center">
-											<span class="fh5co-counter js-counter" data-from="0" data-to="34023" data-speed="5000" data-refresh-interval="50"></span>
-											<span class="fh5co-counter-label">Downloads</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+              </div>
+            </div>
+          </div>	
 
+          <!--==========================Counter==================================================================-->
+          <div id="fh5co-counter" class="fh5co-bg-section" style="background-image: url(https://fixa-assets.s3.amazonaws.com/img/gears.jpg); background-attachment: fixed;">
+            <div class="fh5co-overlay"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fh5co-hero-wrap">
+                    <div class="fh5co-hero-intro text-center to-animate counter-animate">
+                      <!-- <div class="col&#45;md&#45;4 text&#45;center"> -->
+                      <!--   <span class="fh5co&#45;counter js&#45;counter" data&#45;from="0" data&#45;to="28" data&#45;speed="5000" data&#45;refresh&#45;interval="50"></span> -->
+                      <!--   <span class="fh5co&#45;counter&#45;label">Customers</span> -->
+                      <!--  -->
+                      <!-- </div> -->
+                      <!-- <div class="col&#45;md&#45;4 text&#45;center"> -->
+                      <!--   <span class="fh5co&#45;counter js&#45;counter" data&#45;from="0" data&#45;to="57" data&#45;speed="5000" data&#45;refresh&#45;interval="50"></span> -->
+                      <!--   <span class="fh5co&#45;counter&#45;label">Completed Apps</span> -->
+                      <!-- </div> -->
+                      <!-- <div class="col&#45;md&#45;4 text&#45;center"> -->
+                      <!--   <span class="fh5co&#45;counter js&#45;counter" data&#45;from="0" data&#45;to="34023" data&#45;speed="5000" data&#45;refresh&#45;interval="50"></span> -->
+                      <!--   <span class="fh5co&#45;counter&#45;label">Downloads</span> -->
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-				
-<div id="fh5co-features" data-section="features">
-				<div class="container">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-								<h2 class="fh5co-lead to-animate">Our Services</h2>
-								<p class="fh5co-sub to-animate">Yes we will make it shiny, we will even fuel it too, just ask.</p>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a href="#" class="fh5co-feature to-animate">
-									<span class="fh5co-feature-icon"><i class="fa fa-tint"></i></span>
-									<h3 class="fh5co-feature-lead">Oil Change + full Inspection</h3>
-									<p class="fh5co-feature-text">Get you car oil changed while your at work and have it deliverd back to you before you leave for home.</p>
-								</a>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a href="#" class="fh5co-feature to-animate">
-									<span class="fh5co-feature-icon"><i class="fa fa-wrench"></i></span>
-									<h3 class="fh5co-feature-lead">General Repaires</h3>
-									<p class="fh5co-feature-text">Repairs will be estimated depending on your car make and model. You will only be charged if you authorize the repaires.</p>
-								</a>
-							</div>
-							<div class="clearfix visible-sm-block"></div>
-							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a href="#" class="fh5co-feature to-animate">
-									<span class="fh5co-feature-icon"><i class="fa fa-shield"></i></span>
-									<h3 class="fh5co-feature-lead">Winterization</h3>
-									<p class="fh5co-feature-text">Avalible during season changes, now your car can get full rust proofing and tire changed to winter tires. Without the hassle.</p>
-								</a>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a href="#" class="fh5co-feature to-animate">
-									<span class="fh5co-feature-icon"><i class="fa fa-car"></i></span>
-									<h3 class="fh5co-feature-lead">CarClean</h3>
-									<p class="fh5co-feature-text">With our Premium <i>CarClean</i> package, you car get an extrior hand and intrior cleaning. We also offer a Basic <em>CareClean</em> for a small fee added to the derlivery fee.</p>
-								</a>
-							</div>
+          <!--==================================Service Section========================================================-->
+          <div id="fh5co-features" data-section="features">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                  <h2 class="fh5co-lead to-animate">Our Services</h2>
+                  <p class="fh5co-sub to-animate">Yes we will make it shiny, we will even fuel it too, just ask.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                  <a href="#" class="fh5co-feature to-animate">
+                    <span class="fh5co-feature-icon"><i class="fa fa-tint"></i></span>
+                    <h3 class="fh5co-feature-lead">Oil Change + full Inspection</h3>
+                    <p class="fh5co-feature-text">Get you car oil changed while your at work and have it deliverd back to you before you leave for home.</p>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                  <a href="#" class="fh5co-feature to-animate">
+                    <span class="fh5co-feature-icon"><i class="fa fa-wrench"></i></span>
+                    <h3 class="fh5co-feature-lead">General Repaires</h3>
+                    <p class="fh5co-feature-text">Repairs will be estimated depending on your car make and model. You will only be charged if you authorize the repaires.</p>
+                  </a>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                  <a href="#" class="fh5co-feature to-animate">
+                    <span class="fh5co-feature-icon"><i class="fa fa-shield"></i></span>
+                    <h3 class="fh5co-feature-lead">Winterization</h3>
+                    <p class="fh5co-feature-text">Avalible during season changes, now your car can get full rust proofing and tire changed to winter tires. Without the hassle.</p>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                  <a href="#" class="fh5co-feature to-animate">
+                    <span class="fh5co-feature-icon"><i class="fa fa-car"></i></span>
+                    <h3 class="fh5co-feature-lead">CarClean</h3>
+                    <p class="fh5co-feature-text">With our Premium <i>CarClean</i> package, you car get an extrior hand and intrior cleaning. We also offer a Basic <em>CareClean</em> for a small fee added to the derlivery fee.</p>
+                  </a>
+                </div>
 
-							<div class="clearfix visible-sm-block"></div>
+                <div class="clearfix visible-sm-block"></div>
 
-							<div class="fh5co-spacer fh5co-spacer-sm"></div>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
 
-			        	</div>
-			       </div>
-			    </div>
-			    </div>
-				
-				<div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url(https://fixa-assets.s3.amazonaws.com/img/repair.jpg); background-attachment: fixed;" data-section="about">
-					<div class="fh5co-overlay"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="fh5co-hero-wrap">
-									<div class="fh5co-hero-intro text-center">
-										<div class="row">
-											<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-												<h2 class="fh5co-lead to-animate">About Us</h2>
-												<p class="fh5co-sub to-animate">Founded and based in Toronto, FIXA is a new service that sends porters to pick up your car, whenever it needs maintenance or cleaning so you don't have to book appoinments or wait for long hours while you car is being serviced. At FIXA we know cars and we have partnered with some of Toronto's best service facilities to  build an infrastructure that offers you fast, affordable and convenient service you can trust.</p>
-												<div class="to-animate"><a href="#" class="btn btn-primary">Get Started!</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div id="fh5co-pricing" data-section="pricing">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-								<h2 class="fh5co-lead animate-single pricing-animate-1">Pricing</h2>
-								<p class="fh5co-sub animate-single pricing-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-							<div class="col-md-3 to-animate">
-								<a href="#" class="fh5co-figure">
-									<span class="fh5co-price">$1<span>/month</span></span>
-									<h3 class="fh5co-figure-lead">Starter</h3>
-									<p class="fh5co-figure-text">Far far away behind the word mountains</p>
-								</a>
-							</div>
-							<div class="col-md-3 to-animate">
-								<a href="#" class="fh5co-figure">
-									<span class="fh5co-price">$25<span>/month</span></span>
-									<h3 class="fh5co-figure-lead">Regular</h3>
-									<p class="fh5co-figure-text">Far far away behind the word mountains</p>
-								</a>
-							</div>
-							<div class="col-md-3 to-animate">
-								<a href="#" class="fh5co-figure active pricing-feature">
-									<span class="fh5co-price">$59<span>/month</span></span>
-									<h3 class="fh5co-figure-lead">Plus</h3>
-									<p class="fh5co-figure-text">Far far away behind the word mountains</p>
-								</a>
-							</div>
-							<div class="col-md-3 to-animate">
-								<a href="#" class="fh5co-figure">
-									<span class="fh5co-price">$125<span>/month</span></span>
-									<h3 class="fh5co-figure-lead">Enterprise</h3>
-									<p class="fh5co-figure-text">Far far away behind the word mountains</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+        <!--=========================About Section=========================================================================-->
+        <div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url(https://fixa-assets.s3.amazonaws.com/img/repair.jpg); background-attachment: fixed;" data-section="about">
+          <div class="fh5co-overlay"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="fh5co-hero-wrap">
+                  <div class="fh5co-hero-intro text-center">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                        <h2 class="fh5co-lead to-animate">About Us</h2>
+                        <p class="fh5co-sub to-animate">Founded and based in Toronto, FIXA is a new service that sends porters to pick up your car, whenever it needs maintenance or cleaning so you don't have to book appoinments or wait for long hours while you car is being serviced. At FIXA we know cars and we have partnered with some of Toronto's best service facilities to  build an infrastructure that offers you fast, affordable and convenient service you can trust.</p>
+                        <div class="to-animate"><a href="#" class="btn btn-primary">Get Started!</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div id="fh5co-faqs"  data-section="faqs">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-								<h2 class="fh5co-lead animate-single faqs-animate-1">Frequently Ask Questions</h2>
-								<p class="fh5co-sub animate-single faqs-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
-					</div>
-					
+        <!--====================================Pricing Section===========================================================-->
+        <div id="fh5co-pricing" data-section="pricing">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                <h2 class="fh5co-lead animate-single pricing-animate-1">Pricing</h2>
+                <p class="fh5co-sub animate-single pricing-animate-2">So how much does it cost?</p>
+              </div>
 
-					<div class="container">
-						<div class="faq-accordion active to-animate">
-							<span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>
-							<h3>What is Outline?</h3>
-							<div class="faq-body" style="display: block;">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-						<div class="faq-accordion to-animate">
-							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-							<h3>Is Outline Free?</h3>
-							<div class="faq-body">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-						<div class="faq-accordion to-animate">
-							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-							<h3>How do I use Outline Features?</h3>
-							<div class="faq-body">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-						<div class="faq-accordion to-animate">
-							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-							<h3>Which version of iOS do your apps support?</h3>
-							<div class="faq-body">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-						<div class="faq-accordion to-animate">
-							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-							<h3>What languages are available?</h3>
-							<div class="faq-body">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-						<div class="faq-accordion to-animate">
-							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-							<h3>I have technical problem, who do I email?</h3>
-							<div class="faq-body">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+              <div class="col-md-3 to-animate" style="margin-left: 3%;">
+                <a href="#" class="fh5co-figure">
+                  <span class="fh5co-price">$25</span>
+                  <h3 class="fh5co-figure-lead">DELIVERY FEE</h3>
+                  <p class="fh5co-figure-text">We charge a flat delivery fee added to any repair or service your car need.</p>
+                </a>
+              </div>
+              <div class="col-md-3 col-md-offset-1 to-animate">
+                <a href="#" class="fh5co-figure active pricing-feature">
+                  <span class="fh5co-price">$15<span>extra<span></span>
+                  <h3 class="fh5co-figure-lead">CARCARE</h3>
+                  <p class="fh5co-figure-text">With the Added CarCare service. We will wash your car and fuel it if requested.</p>
+                </a>
+              </div>
+              <div class="col-md-3 col-md-offset-1 to-animate">
+                <a href="#" class="fh5co-figure">
+                  <span class="fh5co-price">$100</span>
+                  <h3 class="fh5co-figure-lead">PREMIUM CARECARE</h3>
+                  <p class="fh5co-figure-text">With Premium CarCare we will hand wash you car and clean the interior.</p>
+                </a>
+              </div>
+              <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            </div>
+          </div>
+        </div>
 
-				<!-- <div id="fh5co&#45;subscribe"> -->
-				<!-- 	<div class="container"> -->
-				<!-- 		<div class="row animate&#45;box"> -->
-				<!-- 			<form action="#" method="post"> -->
-				<!-- 				<div class="col&#45;md&#45;3 col&#45;sm&#45;3"> -->
-				<!-- 					<div class="form&#45;group"> -->
-				<!-- 						<input type="text" class="form&#45;control" placeholder="First Name"> -->
-				<!-- 					</div> -->
-				<!-- 				</div> -->
-				<!-- 				<div class="col&#45;md&#45;3 col&#45;sm&#45;3"> -->
-				<!-- 					<div class="form&#45;group"> -->
-				<!-- 						<input type="text" class="form&#45;control" placeholder="Last Name"> -->
-				<!-- 					</div> -->
-				<!-- 				</div> -->
-				<!-- 				<div class="col&#45;md&#45;3 col&#45;sm&#45;3"> -->
-				<!-- 					<div class="form&#45;group"> -->
-				<!-- 						<input type="email" class="form&#45;control" placeholder="Email"> -->
-				<!-- 					</div> -->
-				<!-- 				</div> -->
-				<!-- 				<div class="col&#45;md&#45;3 col&#45;sm&#45;3"> -->
-				<!-- 					<div class="form&#45;group"> -->
-				<!-- 						<input type="submit" class="btn btn&#45;primary" value="Subscribe"> -->
-				<!-- 					</div> -->
-				<!-- 				</div> -->
-				<!-- 			</form> -->
-				<!-- 		</div> -->
-				<!-- 	</div> -->
-				<!-- </div> -->
+        <!--==============FAQ Section=================================================================================-->
+        <div id="fh5co-faqs"  data-section="faqs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                <h2 class="fh5co-lead animate-single faqs-animate-1">Frequently Ask Questions</h2>
+                <p class="fh5co-sub animate-single faqs-animate-2">We thought you might ask.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="faq-accordion active to-animate">
+              <span class="faq-accordion-icon-toggle active"><i class="fa fa-chevron-down"></i></span>
+              <h3>Are you insured?</h3>
+              <div class="faq-body" style="display: block;">
+                <p>We carry a $5M General Liability and $1M Garage Keepers policy protecting you, others and your vehicle. In the unlickly event of damage, all claims should be reported within 24 hours of completion of the service.</p>
+              </div>
+            </div>
+            <div class="faq-accordion to-animate">
+              <span class="faq-accordion-icon-toggle"><i class="fa fa-chevron-down"></i></span>
+              <h3>How do you screen your porters?</h3>
+              <div class="faq-body">
+                <p>Each of our porters goes through a rigorous interview and training process. They must have a clean driving record and pass a criminal background check.At FIXA we have a zero tolerance drug and alcohol policy.</p>
+              </div>
+            </div>
+            <div class="faq-accordion to-animate">
+              <span class="faq-accordion-icon-toggle"><i class="fa fa-chevron-down"></i></span>
+              <h3>When will you pick up my car?</h3>
+              <div class="faq-body">
+                <p>Once you have made a request, our porter will be dispatched the next day to pick up your car from the location you have specified. We generaly dispatch our porters to pick up cars between 9 AM and 12 Noon. Your car will be dropped off between 12 Noon and 3 PM.</p>
+              </div>
+            </div>
+            <div class="faq-accordion to-animate">
+              <span class="faq-accordion-icon-toggle"><i class="fa fa-chevron-down"></i></span>
+              <h3>What happens if my car has to stay in the shop for longer?</h3>
+              <div class="faq-body">
+                <p>While we do our best to bring back your car the same day, your car may have to stay in the shop for longer than a few hours due to unexpected repairs that may be needed. With simple maintenance like an oil change this shouldn't happen but if your car needs to say in the shop for longer than a few hours, we will notify you so you can let us know if you wish to commence repairs or have it returned back to you.</p>
+              </div>
+            </div>
+            <div class="faq-accordion to-animate">
+              <span class="faq-accordion-icon-toggle"><i class="fa fa-chevron-down"></i></span>
+              <h3>What about warrenty on repairs?</h3>
+              <div class="faq-body">
+                <p>All repairs are guaranteed for 90 days. If it's not fixed from the first time, we will fix it and you don't have to pay an extra penny.</p>
+              </div>
+            </div>
+            <div id="faq-accordion-map" data-section="service-area">
+              <div class="faq-accordion to-animate">
+                <span class="faq-accordion-icon-toggle"><i class="fa fa-chevron-down"></i></span>
+                <h3>What is your service area?</h3>
+                <div class="faq-body">
+                  <p>We are currently available in downtown Toronto. We’re looking to expand to your area, so check our Facebook or Twitter for updates! Hours of operation: Mon-Fri: 7am - 7pm. If you are outside our service area, you can request your area <a href="#">here</a> and we will let you know when we have expanded there. Remember that you don't have to be living within the service area, we can pickup and drop your car from anywhere within the service area.</p>
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--==============FAQ End================================================================================-->
 
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-<%= render 'footer' %>
-	</div>
-
-
+    <%= render 'footer' %>
+  </div>

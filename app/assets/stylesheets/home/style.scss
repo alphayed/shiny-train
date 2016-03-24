@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 290px;
 	padding: 40px 30px;
 	background: $brand-white;
-	background: #111111;
+	// background: #111111;
 	color: #878c93;
 	// -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.3);
 	// -moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.3);
@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 #fh5co-pricing {
-	padding: 7em 0;
+	padding: 0;
 	position: relative;
 	border-bottom: 1px solid lighten($brand-gray,15%);
 	.fh5co-price {
@@ -550,7 +550,7 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-products,
 #fh5co-faqs  {
 	position: relative;
-	padding: 2em 0;
+	padding: 0;
 	@media screen and (max-width: $screen-sm) {
 		padding: 4em 0;
 	}
@@ -626,6 +626,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		img {
 			max-width: 100%;
+      border-radius: 25px;
 			@media screen and (max-width: $screen-xs) {
 				max-width: 100%;
 			}
