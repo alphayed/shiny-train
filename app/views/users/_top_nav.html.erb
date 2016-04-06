@@ -13,12 +13,14 @@
                                     <li class="active">Settings</li>
                                   <% elsif current_page?(controller: 'cars', action: 'index') %>
                                     <li class="active">My Cars</li>
+                                  <% elsif current_page?(controller: 'cars', action: 'new') %>
+                                    <li class="active">Add Cars</li>
                                   <% elsif current_page?(controller: 'orders', action: 'new') %>
                                     <li class="active">Request A Service</li>
                                   <% end %>
                                 </ol>
                                 <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
-                                    <i class="fa fa-power-off icon"></i>
+                                    <i class="fa fa-power-off icon" style="color: red;"></i>
                                 </button>
                             </div>
                             <ul class="nav navbar-nav navbar-right">
@@ -35,7 +37,7 @@
                                     <% end %>
                                 </li>
                                 <li>
-                                    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-sm" %>
+                                    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "mbtn btn-primary btn-xs" %>
                                 </li>
 
                             </ul>

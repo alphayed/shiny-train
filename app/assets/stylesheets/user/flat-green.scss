@@ -1,3 +1,5 @@
+$color-gray: #A9A9A9;
+$color-black: #000000;
 $color-my-green: #2aaf67;
 $color-my-lightBlue: #00bff3;
 $color-my-blue: #2fc5cc;
@@ -16,7 +18,8 @@ $color-dark-grey: #2f2f30;
 
 $color-clearer-dark-blue: #9eaabd;
 $color-clear-dark-blue: #73849d;
-$color-dark-blue: #2C3E50;
+// change to orange
+$color-dark-blue: #f68f35;
 $color-dark-blue-1: #22A7F0;
 $color-dark-blue-hover: #363c46;
 
@@ -95,7 +98,7 @@ $theme-danger-color: $color-red;
 
     .navbar-breadcrumb {
       li {
-        color: $color-dark-blue;
+        color: $color-gray;
         a {
           color: $color-dark-blue;
         }
@@ -110,7 +113,7 @@ $theme-danger-color: $color-red;
       }
       & > li:hover {
         & > a {
-          color: $color-dark-green-sea;
+          color: $color-black;
         }
       }
       & > li.open {
@@ -253,7 +256,7 @@ $theme-danger-color: $color-red;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
 
     .navbar-header {
-      background-color: $color-green-sea;
+      background-color: $color-yellow;
       margin-bottom: 4px;
       .navbar-brand {
         color: $color-light-red;

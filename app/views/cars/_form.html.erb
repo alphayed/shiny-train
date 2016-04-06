@@ -31,13 +31,13 @@
 
     <% if current_page?(controller: 'cars', action: 'new') %>
         <div class="form-group">
-            <%= f.submit "Add", class: 'btn btn-primary' %>
-            <%= link_to "Cancel", user_cars_path(current_user), class: "btn btn-default" %>
+            <%= f.submit "Add", class: 'btn btn-primary btn-sm' %>
+            <%= link_to "Cancel", user_cars_path(current_user), class: 'btn btn-default btn-sm' %>
         </div>
     <% else %>
         <div class="form-group">
-            <%= f.submit "Update", class: 'btn btn-primary' %>
-            <%= link_to "Cancel", user_cars_path(current_user), class: "btn btn-default" %>
+            <%= f.submit "Update", class: 'btn btn-primary btn-sm' %>
+            <%= link_to "Cancel", user_cars_path(current_user), class: 'btn btn-default btn-sm' %>
         </div>
     <% end %>
 <% end %>
